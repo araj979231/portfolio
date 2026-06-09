@@ -11,6 +11,9 @@
 </head>
 <body>
 
+<!-- ── SCROLL PROGRESS ── -->
+<div id="scrollProgress"></div>
+
 <!-- ── NAV ── -->
 <nav>
   <a href="#" class="nav-logo">ABHISHEK<span>.</span></a>
@@ -18,10 +21,19 @@
     <li><a href="#about">About</a></li>
     <li><a href="#my-work">My Work</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#tech-stack">Tech Stack</a></li>
+    <li><a href="#apps">Apps</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:araj979231@gmail.com" class="nav-cta">Hire Me →</a>
+  <div class="nav-right">
+    <div class="nav-lang">
+      <button class="nl-btn active" data-lang="en">EN</button>
+      <button class="nl-btn" data-lang="gu">ગુ</button>
+      <button class="nl-btn" data-lang="hi">हि</button>
+    </div>
+    <a href="mailto:araj979231@gmail.com" class="nav-cta" data-i18n="nav.hire">Hire Me →</a>
+  </div>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
@@ -34,12 +46,46 @@
     <li><a href="#about" class="mm-link">About</a></li>
     <li><a href="#my-work" class="mm-link">My Work</a></li>
     <li><a href="#services" class="mm-link">Services</a></li>
+    <li><a href="#tech-stack" class="mm-link">Tech Stack</a></li>
+    <li><a href="#apps" class="mm-link">Apps</a></li>
     <li><a href="#reviews" class="mm-link">Reviews</a></li>
     <li><a href="#contact" class="mm-link">Contact</a></li>
   </ul>
-  <a href="mailto:araj979231@gmail.com" class="mm-cta">Hire Me →</a>
+  <div class="mm-lang">
+    <button class="nl-btn active" data-lang="en">EN</button>
+    <button class="nl-btn" data-lang="gu">ગુ</button>
+    <button class="nl-btn" data-lang="hi">हि</button>
+  </div>
+  <a href="mailto:araj979231@gmail.com" class="mm-cta" data-i18n="nav.hire">Hire Me →</a>
 </div>
 <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<!-- ── IMAGE GALLERY POPUP ── -->
+<div class="gallery-overlay" id="galleryOverlay" role="dialog" aria-modal="true">
+  <div class="gallery-modal">
+    <button class="gallery-close" id="galleryClose" aria-label="Close">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="gallery-counter" id="galleryCounter">1 / 4</div>
+    <div class="gallery-main">
+      <button class="gallery-nav gprev" id="galleryPrev" aria-label="Previous">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <img class="gallery-main-img" id="galleryMainImg" src="" alt="App Screenshot">
+      <button class="gallery-nav gnext" id="galleryNext" aria-label="Next">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="gallery-dots" id="galleryDots"></div>
+    <div class="gallery-thumbs" id="galleryThumbs"></div>
+  </div>
+</div>
+
+<!-- ── FLOATING CONTACT ── -->
+<a href="mailto:araj979231@gmail.com" class="float-contact" title="Send Email">
+  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+  <span>Hire Me</span>
+</a>
 
 <!-- ── HERO ── -->
 <section class="hero">
@@ -55,47 +101,29 @@
   <div class="hero-inner">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Available for New Projects
+      <span data-i18n="hero.badge">Available for New Projects</span>
     </div>
     <h1>
       I Don't Build<br>
       <em>Websites.</em><br>
       I Build Businesses.
     </h1>
-    <p class="hero-sub">
+    <p class="hero-sub" data-i18n="hero.sub">
       I'm Abhishek — a Senior Full-Stack Developer who transforms your idea into a fully-functioning digital business. Strategy, design, backend, frontend, launch — I handle it all so you can focus on what matters: growing your business.
     </p>
     <div class="hero-pills">
-      <span class="hero-pill">⚡ PHP · Laravel · React</span>
-      <span class="hero-pill">🚀 Launch in Weeks, Not Months</span>
-      <span class="hero-pill">💰 Built for Revenue &amp; Growth</span>
-      <span class="hero-pill">🔒 Scalable &amp; Enterprise-Secure</span>
-      <span class="hero-pill">⭐ 30+ Live Products Shipped</span>
+      <span class="hero-pill" data-i18n="hero.pill1">⚡ PHP · Laravel · React</span>
+      <span class="hero-pill" data-i18n="hero.pill2">🚀 Launch in Weeks, Not Months</span>
+      <span class="hero-pill" data-i18n="hero.pill3">💰 Built for Revenue &amp; Growth</span>
+      <span class="hero-pill" data-i18n="hero.pill4">🔒 Scalable &amp; Enterprise-Secure</span>
+      <span class="hero-pill" data-i18n="hero.pill5">⭐ 30+ Live Products Shipped</span>
     </div>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Start Your Project →</a>
+      <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Start Your Project →</a>
       <a href="#my-work" class="btn-outline">
         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-        See My Work
+        <span data-i18n="hero.cta2">See My Work</span>
       </a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num" data-target="5" data-suffix="+">5<em>+</em></div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div>
-        <div class="stat-num" data-target="30" data-suffix="+">30<em>+</em></div>
-        <div class="stat-label">Live Projects</div>
-      </div>
-      <div>
-        <div class="stat-num" data-target="9" data-suffix="">9<em></em></div>
-        <div class="stat-label">Industries Served</div>
-      </div>
-      <div>
-        <div class="stat-num" data-target="50" data-suffix="K+">50<em>K+</em></div>
-        <div class="stat-label">Daily Transactions</div>
-      </div>
     </div>
   </div>
 </section>
@@ -105,15 +133,18 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-left reveal">
-        <div class="section-chip">Who I Am</div>
+        <div class="section-chip" data-i18n="about.chip">Who I Am</div>
         <h2 class="section-title">Not Just a Developer.<br><em>Your Build Partner.</em></h2>
-        <p class="about-intro">
+        <p class="about-intro" data-i18n="about.p1">
           I'm <strong>Abhishek Raj</strong> — and I'll be honest with you. Most developers take your brief, disappear for weeks, and hand you something that technically runs but doesn't actually move your business forward. That's not how I work.
         </p>
-        <p class="about-body">
+        <p class="about-body" data-i18n="about.p2">
           In 5+ years, I've shipped <strong>30+ production platforms</strong> for real businesses — banking systems handling <strong>50,000+ daily transactions</strong>, food delivery apps with live GPS tracking, real estate CRMs that doubled qualified leads, and AI-powered SaaS tools. Every platform is still live, still running, still generating revenue.
         </p>
-        <p class="about-body">
+        <p class="about-body" data-i18n="about.p3">
+          I've built across virtually every domain: <strong>eCommerce stores</strong> that process thousands of orders daily, <strong>HRMS platforms</strong> managing full employee lifecycles, <strong>CRM systems</strong> that convert leads into loyal customers, <strong>CMS solutions</strong> that let teams publish without a developer, agricultural <strong>export portals</strong>, fitness <strong>retail platforms</strong>, and enterprise <strong>ERP dashboards</strong>. If your business has a workflow, I can digitise it.
+        </p>
+        <p class="about-body" data-i18n="about.p4">
           What makes me different: I think like a business owner, not just a coder. I ask <em>why</em> before I write a single line. I flag problems before they get expensive. And I stay in your corner long after launch day.
         </p>
 
@@ -121,13 +152,13 @@
         <div class="vm-grid">
           <div class="vm-card">
             <div class="vm-icon">🔭</div>
-            <div class="vm-card-title">My Vision</div>
-            <p class="vm-card-text">Enterprise-grade digital infrastructure shouldn't be a privilege of large corporations. Every business — from solo founders to growing SMEs — deserves technology that genuinely works for them.</p>
+            <div class="vm-card-title" data-i18n="about.vision.title">My Vision</div>
+            <p class="vm-card-text" data-i18n="about.vision.text">Enterprise-grade digital infrastructure shouldn't be a privilege of large corporations. Every business — from solo founders to growing SMEs — deserves technology that genuinely works for them.</p>
           </div>
           <div class="vm-card">
             <div class="vm-icon">🎯</div>
-            <div class="vm-card-title">My Mission</div>
-            <p class="vm-card-text">To build digital products that don't just function — they perform, grow, and make your business money. Every project I take on gets the same obsessive attention to architecture, speed, and results.</p>
+            <div class="vm-card-title" data-i18n="about.mission.title">My Mission</div>
+            <p class="vm-card-text" data-i18n="about.mission.text">To build digital products that don't just function — they perform, grow, and make your business money. Every project I take on gets the same obsessive attention to architecture, speed, and results.</p>
           </div>
         </div>
         <div class="about-contact-list">
@@ -150,7 +181,7 @@
             
           </div>
         </div>
-        <a href="mailto:araj979231@gmail.com" class="btn-primary" style="display:inline-flex;margin-top:0.5rem;">
+        <a href="mailto:araj979231@gmail.com" class="btn-primary" style="display:inline-flex;margin-top:0.5rem;" data-i18n="about.cta">
           Let's Work Together →
         </a>
       </div>
@@ -227,9 +258,9 @@
 <!-- ── MY WORK ── -->
 <section id="my-work">
   <div class="container">
-    <div class="section-chip">Live Websites</div>
-    <h2 class="section-title">My Work</h2>
-    <p class="section-sub">9 platforms live in production. Each one built to solve a real business problem — and each one still running, scaling, and generating value today.</p>
+    <div class="section-chip" data-i18n="work.chip">Live Websites</div>
+    <h2 class="section-title" data-i18n="work.title">My Work</h2>
+    <p class="section-sub" data-i18n="work.sub">12 platforms live in production. Each one built to solve a real business problem — and each one still running, scaling, and generating value today.</p>
     <div class="work-slider-wrap">
       <div class="work-track-outer">
         <div class="work-track" id="workTrack"></div>
@@ -252,15 +283,15 @@
 <!-- ── SERVICES ── -->
 <section id="services">
   <div class="container">
-    <div class="section-chip">What I Offer</div>
-    <h2 class="section-title">Services</h2>
-    <p class="section-sub">From design to deployment — end-to-end digital solutions built to perform, scale, and impress.</p>
+    <div class="section-chip" data-i18n="services.chip">What I Offer</div>
+    <h2 class="section-title" data-i18n="services.title">Services</h2>
+    <p class="section-sub" data-i18n="services.sub">From design to deployment — end-to-end digital solutions built to perform, scale, and impress.</p>
     <div class="services-grid">
 
       <div class="service-card reveal">
         <div class="service-icon">🎨</div>
-        <h3>Web Design</h3>
-        <p>Modern, responsive, and pixel-perfect UI/UX design that makes your brand stand out. Clean layouts built for conversion and user engagement.</p>
+        <h3 data-i18n="svc1.title">Web Design</h3>
+        <p data-i18n="svc1.desc">Modern, responsive, and pixel-perfect UI/UX design that makes your brand stand out. Clean layouts built for conversion and user engagement.</p>
         <ul class="service-list">
           <li>UI/UX design &amp; prototyping</li>
           <li>Landing pages &amp; corporate sites</li>
@@ -272,8 +303,8 @@
 
       <div class="service-card reveal delay-1">
         <div class="service-icon">💻</div>
-        <h3>Web Development</h3>
-        <p>Robust, high-performance web applications built with Laravel &amp; PHP. From simple websites to complex multi-role platforms with advanced features.</p>
+        <h3 data-i18n="svc2.title">Web Development</h3>
+        <p data-i18n="svc2.desc">Robust, high-performance web applications built with Laravel &amp; PHP. From simple websites to complex multi-role platforms with advanced features.</p>
         <ul class="service-list">
           <li>Custom Laravel / PHP applications</li>
           <li>RESTful API design &amp; development</li>
@@ -285,8 +316,8 @@
 
       <div class="service-card reveal delay-2">
         <div class="service-icon">📱</div>
-        <h3>App Development</h3>
-        <p>Full-featured mobile and progressive web applications with seamless backend integration, real-time features, and native-like performance.</p>
+        <h3 data-i18n="svc3.title">App Development</h3>
+        <p data-i18n="svc3.desc">Full-featured mobile and progressive web applications with seamless backend integration, real-time features, and native-like performance.</p>
         <ul class="service-list">
           <li>React-based web &amp; PWA apps</li>
           <li>API-first mobile backends</li>
@@ -300,12 +331,191 @@
   </div>
 </section>
 
+<!-- ── TECH STACK ── -->
+<section id="tech-stack" class="tech-stack-section">
+  <div class="container">
+    <div class="section-chip" data-i18n="ts.chip">Under the Hood</div>
+    <h2 class="section-title" data-i18n="ts.title">Technical Stack</h2>
+    <p class="section-sub" data-i18n="ts.sub">Every tool I use is chosen for performance, scalability, and real-world results — not trends.</p>
+
+    <div class="ts-grid">
+      <div class="ts-card reveal">
+        <div class="ts-card-head">
+          <div class="ts-icon">⚙️</div>
+          <div class="ts-cat">Backend</div>
+        </div>
+        <div class="ts-tags">
+          <span class="ts-tag">PHP 8.x</span>
+          <span class="ts-tag">Laravel</span>
+          <span class="ts-tag">RESTful APIs</span>
+          <span class="ts-tag">Microservices</span>
+          <span class="ts-tag">TDD / PHPUnit</span>
+          <span class="ts-tag">Service-Repo Pattern</span>
+        </div>
+      </div>
+      <div class="ts-card reveal delay-1">
+        <div class="ts-card-head">
+          <div class="ts-icon">🎨</div>
+          <div class="ts-cat">Frontend</div>
+        </div>
+        <div class="ts-tags">
+          <span class="ts-tag">React.js</span>
+          <span class="ts-tag">JavaScript</span>
+          <span class="ts-tag">Tailwind CSS</span>
+          <span class="ts-tag">Bootstrap</span>
+          <span class="ts-tag">HTML5 / CSS3</span>
+          <span class="ts-tag">Laravel Blade</span>
+        </div>
+      </div>
+      <div class="ts-card reveal delay-2">
+        <div class="ts-card-head">
+          <div class="ts-icon">🗄️</div>
+          <div class="ts-cat">Database &amp; Tools</div>
+        </div>
+        <div class="ts-tags">
+          <span class="ts-tag">MySQL</span>
+          <span class="ts-tag">MongoDB</span>
+          <span class="ts-tag">Query Optimization</span>
+          <span class="ts-tag">Caching</span>
+          <span class="ts-tag">Git</span>
+          <span class="ts-tag">Postman</span>
+        </div>
+      </div>
+      <div class="ts-card reveal delay-3">
+        <div class="ts-card-head">
+          <div class="ts-icon">💳</div>
+          <div class="ts-cat">Payments &amp; Integrations</div>
+        </div>
+        <div class="ts-tags">
+          <span class="ts-tag">Razorpay</span>
+          <span class="ts-tag">UPI / Wallets</span>
+          <span class="ts-tag">Tink API</span>
+          <span class="ts-tag">TrueLayer</span>
+          <span class="ts-tag">Moneyhub</span>
+          <span class="ts-tag">GPT API</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ts-domains reveal">
+      <div class="ts-domains-label" data-i18n="ts.domains.label">Domains I've Built For</div>
+      <div class="ts-domain-chips">
+        <span class="td-chip">🛒 eCommerce</span>
+        <span class="td-chip">💼 Payroll &amp; HRMS</span>
+        <span class="td-chip">🌐 Business Websites</span>
+        <span class="td-chip">📱 Web Apps</span>
+        <span class="td-chip">💰 Finance &amp; Debt CRM</span>
+        <span class="td-chip">📊 Zoho-type CRM / ERP</span>
+        <span class="td-chip">🎲 Matka Game App</span>
+        <span class="td-chip">🧑‍💼 Job Portals</span>
+        <span class="td-chip">🏠 Real Estate</span>
+        <span class="td-chip">🍔 Food Delivery Apps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MOBILE APPS ── -->
+<section id="apps" class="apps-section">
+  <div class="container">
+    <div class="section-chip" data-i18n="apps.chip">App Portfolio</div>
+    <h2 class="section-title" data-i18n="apps.title">Mobile Apps Built</h2>
+    <p class="section-sub" data-i18n="apps.sub">Full-stack mobile app backends with real-time features, multi-role access, and polished user experiences — built and deployed in production.</p>
+
+    <div class="apps-grid">
+
+      <!-- DEI Job Portal -->
+      <div class="app-card reveal">
+        <div class="app-card-inner">
+          <div class="app-img-slider" data-slider="dei">
+            <span class="ais-view-hint">🔍 View All</span>
+            <div class="ais-track" id="aisTrackDEI">
+              <img src="images/dreams/Screenshot (1098).png" class="ais-slide" alt="DEI App 1">
+              <img src="images/dreams/Screenshot (1099).png" class="ais-slide" alt="DEI App 2">
+              <img src="images/dreams/Screenshot (1100).png" class="ais-slide" alt="DEI App 3">
+              <img src="images/dreams/Screenshot (1101).png" class="ais-slide" alt="DEI App 4">
+            </div>
+            <button class="ais-arrow ais-prev" data-target="dei" aria-label="Previous">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="ais-arrow ais-next" data-target="dei" aria-label="Next">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="ais-dots" id="aisDotsDEI"></div>
+          </div>
+          <div class="app-info">
+            <div class="app-badge" data-i18n="dei.badge">Job Portal</div>
+            <h3 class="app-name" data-i18n="dei.name">DEI Champion</h3>
+            <p class="app-desc" data-i18n="dei.desc">A full-featured job portal where candidates can discover opportunities, build profiles, and apply directly — while employers post jobs, manage applicants, and hire smarter. Features coin-based access, recruiter dashboards, real-time chat, and subscription plans.</p>
+            <div class="app-features">
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="dei.f1">Candidate profiles &amp; resume upload</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="dei.f2">Recruiter &amp; employer dashboard</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="dei.f3">Coin-based job access system</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="dei.f4">Real-time chat &amp; notifications</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="dei.f5">Subscription &amp; payment plans</span></div>
+            </div>
+            <div class="app-stack">
+              <span class="as-tag">Laravel</span>
+              <span class="as-tag">React.js</span>
+              <span class="as-tag">MySQL</span>
+              <span class="as-tag">Razorpay</span>
+              <span class="as-tag">WebSockets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutrition Food App -->
+      <div class="app-card reveal delay-1">
+        <div class="app-card-inner">
+          <div class="app-img-slider" data-slider="nn">
+            <span class="ais-view-hint">🔍 View All</span>
+            <div class="ais-track" id="aisTrackNN">
+              <img src="images/dreams/Screenshot (1102).png" class="ais-slide" alt="NutritionNook 1">
+              <img src="images/dreams/Screenshot (1103).png" class="ais-slide" alt="NutritionNook 2">
+              <img src="images/dreams/Screenshot (1104).png" class="ais-slide" alt="NutritionNook 3">
+              <img src="images/dreams/Screenshot (1105).png" class="ais-slide" alt="NutritionNook 4">
+            </div>
+            <button class="ais-arrow ais-prev" data-target="nn" aria-label="Previous">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="ais-arrow ais-next" data-target="nn" aria-label="Next">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <div class="ais-dots" id="aisDotsNN"></div>
+          </div>
+          <div class="app-info">
+            <div class="app-badge" data-i18n="nn.badge">Food Delivery</div>
+            <h3 class="app-name" data-i18n="nn.name">NutritionNook</h3>
+            <p class="app-desc" data-i18n="nn.desc">A Swiggy-style food ordering platform where users browse menus, place real-time orders, and track delivery live. Features multi-restaurant support, GPS-based delivery tracking, OTP verification, loyalty rewards, and a powerful admin panel for restaurant and rider management.</p>
+            <div class="app-features">
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="nn.f1">Real-time order tracking with GPS</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="nn.f2">Multi-restaurant &amp; menu management</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="nn.f3">Rider app with delivery routing</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="nn.f4">UPI / Wallet / COD payments</span></div>
+              <div class="app-feat"><span class="af-dot"></span><span data-i18n="nn.f5">Admin panel for all operations</span></div>
+            </div>
+            <div class="app-stack">
+              <span class="as-tag">Laravel</span>
+              <span class="as-tag">React.js</span>
+              <span class="as-tag">MySQL</span>
+              <span class="as-tag">Google Maps API</span>
+              <span class="as-tag">Razorpay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ── REVIEWS ── -->
 <section id="reviews">
   <div class="container">
-    <div class="section-chip">Client Reviews</div>
-    <h2 class="section-title">What Clients Say</h2>
-    <p class="section-sub">Real feedback from real clients across banking, food delivery, real estate, and more.</p>
+    <div class="section-chip" data-i18n="reviews.chip">Client Reviews</div>
+    <h2 class="section-title" data-i18n="reviews.title">What Clients Say</h2>
+    <p class="section-sub" data-i18n="reviews.sub">Real feedback from real clients across banking, food delivery, real estate, and more.</p>
     <div class="reviews-grid">
 
       <div class="review-card reveal">
@@ -394,8 +604,8 @@
 <section id="contact">
   <div class="container">
     <div class="cta-box">
-      <h2>Let's Build Something<br>Remarkable Together.</h2>
-      <p>Available for freelance projects, full-time roles &amp; technical consulting.</p>
+      <h2 data-i18n="contact.title">Let's Build Something<br>Remarkable Together.</h2>
+      <p data-i18n="contact.sub">Available for freelance projects, full-time roles &amp; technical consulting.</p>
       <div class="cta-contact-row">
         <a href="mailto:araj979231@gmail.com" class="cta-contact-item">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
@@ -409,11 +619,11 @@
       <div class="cta-buttons">
         <a href="mailto:araj979231@gmail.com" class="btn-cta-primary">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-          Send an Email
+          <span data-i18n="contact.email">Send an Email</span>
         </a>
         <a href="tel:+916353045604" class="btn-cta-secondary">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.38 2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
-          Call Now
+          <span data-i18n="contact.call">Call Now</span>
         </a>
       </div>
     </div>

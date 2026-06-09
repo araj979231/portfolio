@@ -6,6 +6,91 @@
 // ── WORK DATA — each site has 3 "screenshot" views ──────────
 const WORK_DATA = [
   {
+    domain: "Agricultural Export",
+    title: "Vani Export",
+    desc: "A premium B2B export portal connecting India's finest agricultural producers with global buyers. Vani Export showcases quality-certified produce, manages bulk enquiries, automates buyer communication, and builds trust through verified certifications — bridging Indian farms to international markets.",
+    features: ["Product Catalogue", "Bulk Enquiry System", "Buyer Verification", "Export Documentation", "Multi-currency Pricing"],
+    url: "mailto:araj979231@gmail.com",
+    urlText: "vaniexport.com",
+    tags: ["Laravel", "Export", "B2B"],
+    bg: "linear-gradient(135deg, #1a2e05 0%, #365314 55%, #65a30d 100%)",
+    accent: "#a3e635",
+    c: ["#65a30d", "#4d7c0f", "#3f6212"],
+    imgs: [
+      "images/vani/varni-1.png",
+      "images/vani/varni-2.png",
+      "images/vani/varni-3.png",
+      "images/vani/varni-4.png",
+      "images/vani/varni-5.png",
+      "images/vani/varni-6.png",
+      "images/vani/varni-7.png",
+      "images/vani/varni-8.png",
+      "images/vani/varni-9.png",
+      "images/vani/varni-10.png",
+    ],
+    slides: [
+      { label: "Homepage", layout: "hero" },
+      { label: "Product Catalogue", layout: "grid" },
+      { label: "Enquiry Portal", layout: "form" }
+    ]
+  },
+  {
+    domain: "HR Technology",
+    title: "HRMS Pulse",
+    desc: "A comprehensive Human Resource Management System designed to streamline every stage of the employee lifecycle. HRMS Pulse delivers cutting-edge tools for recruitment pipelines, automated payroll processing, real-time attendance tracking, performance appraisals, and team analytics — all in one unified dashboard.",
+    features: ["Recruitment Pipeline", "Payroll Automation", "Attendance & Leave", "Performance Appraisals", "Team Analytics Dashboard"],
+    url: "mailto:araj979231@gmail.com",
+    urlText: "hrmspulse.com",
+    tags: ["Laravel", "HRMS", "SaaS"],
+    bg: "linear-gradient(135deg, #0c1a3a 0%, #1e3a8a 55%, #2563eb 100%)",
+    accent: "#60a5fa",
+    c: ["#2563eb", "#1d4ed8", "#1e40af"],
+    imgs: [
+      "images/hrms/h-10.png",
+      "images/hrms/h-13.png",
+      "images/hrms/h-15.png",
+      "images/hrms/h-18.png",
+      "images/hrms/h-2.png",
+      "images/hrms/h-20.png",
+      "images/hrms/h-21.png",
+      "images/hrms/h-3.png",
+      "images/hrms/h-4.png",
+      "images/hrms/h-8.png"
+    ],
+    slides: [
+      { label: "Dashboard", layout: "dashboard" },
+      { label: "Employee Records", layout: "list" },
+      { label: "Payroll Module", layout: "form" }
+    ]
+  },
+  {
+    domain: "E-Commerce",
+    title: "FitCommerce Pro",
+    desc: "Fitness gear delivered to your doorstep — shop today, sweat tomorrow. FitCommerce Pro is a specialized e-commerce platform built for fitness enthusiasts, offering high-quality workout equipment and supplements at competitive prices. Smart product filtering, cart management, secure checkout, and post-order tracking make it effortless.",
+    features: ["Smart Product Filters", "Cart & Wishlist", "Secure Checkout", "Order Tracking", "Admin Inventory Panel"],
+    url: "mailto:araj979231@gmail.com",
+    urlText: "fitcommercepro.com",
+    tags: ["React", "eCommerce", "Fitness"],
+    bg: "linear-gradient(135deg, #0f0a1a 0%, #4c1d95 55%, #7c3aed 100%)",
+    accent: "#c4b5fd",
+    c: ["#7c3aed", "#6d28d9", "#5b21b6"],
+    imgs: [
+      "images/fitness/e-1.png",
+      "images/fitness/e-2.png",
+      "images/fitness/e-3.png",
+      "images/fitness/e-4.png",
+      "images/fitness/e-5.png",
+      "images/fitness/e-6.png",
+      "images/fitness/e-7.png",
+      "images/fitness/e-8.png"
+    ],
+    slides: [
+      { label: "Shop Homepage", layout: "hero" },
+      { label: "Product Grid", layout: "grid" },
+      { label: "Checkout Flow", layout: "form" }
+    ]
+  },
+  {
     domain: "IT Company",
     title: "Dreams Technology",
     desc: "A sleek, conversion-driven corporate website for a full-service software firm. Powered by a Laravel CMS, it showcases services, a live project portfolio, and team profiles — backed by a smart inquiry system that turns every visit into a business lead.",
@@ -219,7 +304,7 @@ const WORK_DATA = [
   {
     domain: "Education",
     title: "Hillwoods School",
-    desc: "A feature-rich school platform bringing modern EdTech to traditional schooling. Online admissions, academic calendars, teacher profiles, event management, digital notice boards, and a secure parent-student communication portal — all in one.",
+    desc: "A feature-rich school platform bringing modern EdTech to traditional schooling. Online admissions, academic calendars, teacher profiles, event management, digital notice boards, and a secure parent-student communication portal — all in one, fully mobile-responsive system.",
     features: ["Online Admissions", "Academic Calendar", "Teacher Profiles", "Event Management", "Parent Portal"],
     url: "https://www.hillwoodsschool.com/",
     urlText: "hillwoodsschool.com",
@@ -782,6 +867,400 @@ window.addEventListener('scroll', () => {
   document.querySelectorAll('.mm-link').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
+})();
+
+// ── Full-site translations ───────────────────────────────
+const TRANSLATIONS = {
+  en: {
+    'nav.hire': 'Hire Me →',
+    'hero.badge': 'Available for New Projects',
+    'hero.sub': "I'm Abhishek — a Senior Full-Stack Developer who transforms your idea into a fully-functioning digital business. Strategy, design, backend, frontend, launch — I handle it all so you can focus on what matters: growing your business.",
+    'hero.cta1': 'Start Your Project →',
+    'hero.cta2': 'See My Work',
+    'hero.pill1': '⚡ PHP · Laravel · React',
+    'hero.pill2': '🚀 Launch in Weeks, Not Months',
+    'hero.pill3': '💰 Built for Revenue & Growth',
+    'hero.pill4': '🔒 Scalable & Enterprise-Secure',
+    'hero.pill5': '⭐ 30+ Live Products Shipped',
+    'about.chip': 'Who I Am',
+    'about.p1': "I'm Abhishek Raj — and I'll be honest with you. Most developers take your brief, disappear for weeks, and hand you something that technically runs but doesn't actually move your business forward. That's not how I work.",
+    'about.p2': "In 5+ years, I've shipped 30+ production platforms for real businesses — banking systems handling 50,000+ daily transactions, food delivery apps with live GPS tracking, real estate CRMs that doubled qualified leads, and AI-powered SaaS tools. Every platform is still live, still running, still generating revenue.",
+    'about.p3': "I've built across virtually every domain: eCommerce stores that process thousands of orders daily, HRMS platforms managing full employee lifecycles, CRM systems that convert leads into loyal customers, CMS solutions, agricultural export portals, fitness retail platforms, and enterprise ERP dashboards. If your business has a workflow, I can digitise it.",
+    'about.p4': "What makes me different: I think like a business owner, not just a coder. I ask why before I write a single line. I flag problems before they get expensive. And I stay in your corner long after launch day.",
+    'about.vision.title': 'My Vision',
+    'about.vision.text': "Enterprise-grade digital infrastructure shouldn't be a privilege of large corporations. Every business — from solo founders to growing SMEs — deserves technology that genuinely works for them.",
+    'about.mission.title': 'My Mission',
+    'about.mission.text': "To build digital products that don't just function — they perform, grow, and make your business money. Every project I take on gets the same obsessive attention to architecture, speed, and results.",
+    'about.cta': "Let's Work Together →",
+    'work.chip': 'Live Websites',
+    'work.title': 'My Work',
+    'work.sub': '12 platforms live in production. Each one built to solve a real business problem — and each one still running, scaling, and generating value today.',
+    'services.chip': 'What I Offer',
+    'services.title': 'Services',
+    'services.sub': 'From design to deployment — end-to-end digital solutions built to perform, scale, and impress.',
+    'svc1.title': 'Web Design',
+    'svc1.desc': 'Modern, responsive, and pixel-perfect UI/UX design that makes your brand stand out. Clean layouts built for conversion and user engagement.',
+    'svc2.title': 'Web Development',
+    'svc2.desc': 'Robust, high-performance web applications built with Laravel & PHP. From simple websites to complex multi-role platforms with advanced features.',
+    'svc3.title': 'App Development',
+    'svc3.desc': 'Full-featured mobile and progressive web applications with seamless backend integration, real-time features, and native-like performance.',
+    'ts.chip': 'Under the Hood',
+    'ts.title': 'Technical Stack',
+    'ts.sub': 'Every tool I use is chosen for performance, scalability, and real-world results — not trends.',
+    'ts.domains.label': "Domains I've Built For",
+    'apps.chip': 'App Portfolio',
+    'apps.title': 'Mobile Apps Built',
+    'apps.sub': 'Full-stack mobile app backends with real-time features, multi-role access, and polished user experiences — built and deployed in production.',
+    'dei.badge': 'Job Portal',
+    'dei.name': 'DEI Champion',
+    'dei.desc': 'A full-featured job portal where candidates can discover opportunities, build profiles, and apply directly — while employers post jobs, manage applicants, and hire smarter. Features coin-based access, recruiter dashboards, real-time chat, and subscription plans.',
+    'dei.f1': 'Candidate profiles & resume upload',
+    'dei.f2': 'Recruiter & employer dashboard',
+    'dei.f3': 'Coin-based job access system',
+    'dei.f4': 'Real-time chat & notifications',
+    'dei.f5': 'Subscription & payment plans',
+    'nn.badge': 'Food Delivery',
+    'nn.name': 'NutritionNook',
+    'nn.desc': 'A Swiggy-style food ordering platform where users browse menus, place real-time orders, and track delivery live. Features multi-restaurant support, GPS-based delivery tracking, OTP verification, loyalty rewards, and a powerful admin panel.',
+    'nn.f1': 'Real-time order tracking with GPS',
+    'nn.f2': 'Multi-restaurant & menu management',
+    'nn.f3': 'Rider app with delivery routing',
+    'nn.f4': 'UPI / Wallet / COD payments',
+    'nn.f5': 'Admin panel for all operations',
+    'reviews.chip': 'Client Reviews',
+    'reviews.title': 'What Clients Say',
+    'reviews.sub': 'Real feedback from real clients across banking, food delivery, real estate, and more.',
+    'contact.title': "Let's Build Something<br>Remarkable Together.",
+    'contact.sub': 'Available for freelance projects, full-time roles & technical consulting.',
+    'contact.email': 'Send an Email',
+    'contact.call': 'Call Now',
+  },
+  gu: {
+    'nav.hire': 'હાયર કરો →',
+    'hero.badge': 'નવા પ્રોજેક્ટ માટે ઉપલબ્ધ',
+    'hero.sub': 'હું અભિષેક છું — Senior Full-Stack Developer જે તમારા idea ને સંપૂર્ણ digital business બનાવે. Strategy, design, backend, frontend, launch — બધું સ્વ-સ્ત્રરે સંભાળું.',
+    'hero.cta1': 'પ્રોજેક્ટ શરૂ કરો →',
+    'hero.cta2': 'મારું કામ જુઓ',
+    'hero.pill1': '⚡ PHP · Laravel · React',
+    'hero.pill2': '🚀 અઠવાડિયામાં Launch',
+    'hero.pill3': '💰 Revenue-Focused Development',
+    'hero.pill4': '🔒 Enterprise-Secure',
+    'hero.pill5': '⭐ ૩૦+ Live Products Shipped',
+    'about.chip': 'મારા વિશે',
+    'about.p1': 'હું અભિષેક રાજ — સ્પષ્ટ વાત: મોટા ભાગના developers brief લઈ ગાયબ થઈ જાય ને ટેક્નિકલી ચાલે એ deliver કરે, પણ ધંધો આગળ ન વધે. હું એ રીતે કામ નથી કરતો.',
+    'about.p2': '5+ વર્ષમાં 30+ production platforms ship કર્યા — banking systems જ્યાં 50,000+ daily transactions, GPS food delivery apps, real estate CRMs, AI SaaS tools. દરેક platform live, running ને revenue generate કરે છે.',
+    'about.p3': 'eCommerce, HRMS, CRM, CMS, export portals, fitness platforms, ERP dashboards — જો તમારા business માં workflow છે, તો હું digitise કરી શકું.',
+    'about.p4': 'ફરક: હું coder ની જેમ નહીં, business owner ની જેમ વિચારું. Why? પૂછ્યા વગર line નથી લખતો. Problem launch પહેલાં flag કરું. Launch પછી પણ સાથ.',
+    'about.vision.title': 'મારો Vision',
+    'about.vision.text': 'Enterprise-grade digital infrastructure ફક્ત મોટી companies નો special right ન હોવો જોઈએ. Solo founder થી growing SME — દરેક business ને technology deserve.',
+    'about.mission.title': 'મારો Mission',
+    'about.mission.text': 'એવા digital products build કરવા જે ફક્ત function ન કરે — perform, grow, ને business ma money lave. દરેક project ma architecture, speed, ane results par obsessive focus.',
+    'about.cta': 'સાથ Work કરીએ →',
+    'work.chip': 'Live Websites',
+    'work.title': 'મારું કામ',
+    'work.sub': '12 platforms production ma live. દરેક real business problem solve કરવા build. આજે પણ running, scaling ને value generate.',
+    'services.chip': 'હું શું offer કરું',
+    'services.title': 'Services',
+    'services.sub': 'Design થી deployment — end-to-end digital solutions.',
+    'svc1.title': 'Web Design',
+    'svc1.desc': 'Modern, responsive, pixel-perfect UI/UX design. Brand stand out, conversion-focused clean layouts.',
+    'svc2.title': 'Web Development',
+    'svc2.desc': 'Laravel & PHP સાથે robust, high-performance web apps. Simple websites થી complex multi-role platforms.',
+    'svc3.title': 'App Development',
+    'svc3.desc': 'Full-featured mobile ane progressive web apps — seamless backend, real-time features, native-like performance.',
+    'ts.chip': 'Technical Detail',
+    'ts.title': 'Technical Stack',
+    'ts.sub': 'દરેક tool performance, scalability ane real-world results માટે — trends નહીં.',
+    'ts.domains.label': 'Domains જ્યાં built',
+    'apps.chip': 'App Portfolio',
+    'apps.title': 'Mobile Apps Built',
+    'apps.sub': 'Full-stack app backends — real-time features, multi-role access ane polished UX — production ma deployed.',
+    'dei.badge': 'Job Portal',
+    'dei.name': 'DEI Champion',
+    'dei.desc': 'Full-featured job portal — candidates opportunities discover ane apply, employers jobs post ane hire. Coin-based access, recruiter dashboards, real-time chat, subscription plans.',
+    'dei.f1': 'Candidate profiles & resume upload',
+    'dei.f2': 'Recruiter & employer dashboard',
+    'dei.f3': 'Coin-based job access system',
+    'dei.f4': 'Real-time chat & notifications',
+    'dei.f5': 'Subscription & payment plans',
+    'nn.badge': 'Food Delivery',
+    'nn.name': 'NutritionNook',
+    'nn.desc': 'Swiggy-style food ordering platform — menus browse, real-time orders, GPS delivery tracking. Multi-restaurant, OTP, loyalty rewards ane powerful admin panel.',
+    'nn.f1': 'GPS-based real-time order tracking',
+    'nn.f2': 'Multi-restaurant & menu management',
+    'nn.f3': 'Rider app with delivery routing',
+    'nn.f4': 'UPI / Wallet / COD payments',
+    'nn.f5': 'Admin panel for all operations',
+    'reviews.chip': 'Client Reviews',
+    'reviews.title': 'Clients શું કહે છે',
+    'reviews.sub': 'Banking, food delivery, real estate — real clients na real reviews.',
+    'contact.title': 'સાથ મળ્ ―<br>કૈઇ અદ્ભૂત Build કરીએ.',
+    'contact.sub': 'Freelance projects, full-time roles & technical consulting.',
+    'contact.email': 'Email કરો',
+    'contact.call': 'Call કરો',
+  },
+  hi: {
+    'nav.hire': 'हायर करें →',
+    'hero.badge': 'नए प्रोजेक्ट के लिए उपलब्ध',
+    'hero.sub': 'मैं अभिषेक हूँ — Senior Full-Stack Developer जो आपके idea को पूरे digital business में बदलता है। Strategy, design, backend, frontend, launch — सब कुछ संभालता हूँ।',
+    'hero.cta1': 'प्रोजेक्ट शुरू करें →',
+    'hero.cta2': 'मेरा काम देखें',
+    'hero.pill1': '⚡ PHP · Laravel · React',
+    'hero.pill2': '🚀 हफ्तों में Launch',
+    'hero.pill3': '💰 Revenue-Focused Development',
+    'hero.pill4': '🔒 Enterprise-Secure',
+    'hero.pill5': '⭐ 30+ Live Products Shipped',
+    'about.chip': 'मेरे बारे में',
+    'about.p1': 'मैं अभिषेक राज — सीधी बात: ज़्यादातर developers brief लेकर गायब हो जाते हैं और technically चलने वाली चीज़ देते हैं जो business नहीं बढ़ाती। मेरा तरीका अलग है।',
+    'about.p2': '5+ साल में 30+ production platforms ship किए — banking systems जो 50,000+ daily transactions handle करते हैं, GPS food delivery apps, real estate CRMs, AI-powered SaaS tools। हर platform आज भी live और revenue generate कर रहा है।',
+    'about.p3': 'eCommerce, HRMS, CRM, CMS, export portals, fitness platforms, ERP dashboards — अगर आपके business में workflow है, मैं उसे digitise कर सकता हूँ।',
+    'about.p4': 'फ़र्क: मैं coder की तरह नहीं, business owner की तरह सोचता हूँ। Why? पूछे बिना एक line नहीं लिखता। Launch से पहले problem flag करता हूँ। Launch के बाद भी साथ हूँ।',
+    'about.vision.title': 'मेरा Vision',
+    'about.vision.text': 'Enterprise-grade digital infrastructure सिर्फ बड़ी companies का हक नहीं होना चाहिए। Solo founder से growing SME — हर business को असली technology deserve करता है।',
+    'about.mission.title': 'मेरा Mission',
+    'about.mission.text': 'ऐसे digital products बनाना जो सिर्फ function न करें — perform करें, grow करें, business में पैसा लाएं। हर project में architecture, speed और results पर obsessive ध्यान।',
+    'about.cta': 'साथ काम करें →',
+    'work.chip': 'Live Websites',
+    'work.title': 'मेरा काम',
+    'work.sub': '12 platforms production में live। हर एक real business problem solve करने के लिए built — आज भी running, scaling और value generate कर रहे हैं।',
+    'services.chip': 'मैं क्या offer करता हूँ',
+    'services.title': 'Services',
+    'services.sub': 'Design से deployment — end-to-end digital solutions।',
+    'svc1.title': 'Web Design',
+    'svc1.desc': 'Modern, responsive, pixel-perfect UI/UX design। Brand को stand out कराएं, conversion-focused clean layouts।',
+    'svc2.title': 'Web Development',
+    'svc2.desc': 'Laravel & PHP के साथ robust, high-performance web apps। Simple websites से complex multi-role platforms तक।',
+    'svc3.title': 'App Development',
+    'svc3.desc': 'Full-featured mobile और progressive web apps — seamless backend, real-time features, native-like performance।',
+    'ts.chip': 'Technical Detail',
+    'ts.title': 'Technical Stack',
+    'ts.sub': 'हर tool performance, scalability और real-world results के लिए — trends के लिए नहीं।',
+    'ts.domains.label': 'वे Domains जहाँ built किया',
+    'apps.chip': 'App Portfolio',
+    'apps.title': 'Mobile Apps Built',
+    'apps.sub': 'Full-stack app backends — real-time features, multi-role access और polished UX — production में deployed।',
+    'dei.badge': 'Job Portal',
+    'dei.name': 'DEI Champion',
+    'dei.desc': 'Full-featured job portal — candidates opportunities discover करें और apply करें, employers jobs post और hire करें। Coin-based access, recruiter dashboards, real-time chat, subscription plans।',
+    'dei.f1': 'Candidate profiles & resume upload',
+    'dei.f2': 'Recruiter & employer dashboard',
+    'dei.f3': 'Coin-based job access system',
+    'dei.f4': 'Real-time chat & notifications',
+    'dei.f5': 'Subscription & payment plans',
+    'nn.badge': 'Food Delivery',
+    'nn.name': 'NutritionNook',
+    'nn.desc': 'Swiggy-style food ordering platform — menus browse करें, real-time orders place करें, GPS से delivery track करें। Multi-restaurant, OTP, loyalty rewards और powerful admin panel।',
+    'nn.f1': 'GPS-based real-time order tracking',
+    'nn.f2': 'Multi-restaurant & menu management',
+    'nn.f3': 'Rider app with delivery routing',
+    'nn.f4': 'UPI / Wallet / COD payments',
+    'nn.f5': 'Admin panel for all operations',
+    'reviews.chip': 'Client Reviews',
+    'reviews.title': 'Clients क्या कहते हैं',
+    'reviews.sub': 'Banking, food delivery, real estate — real clients के real reviews।',
+    'contact.title': 'साथ मिलकर कुछ<br>शानदार बनाएं।',
+    'contact.sub': 'Freelance projects, full-time roles & technical consulting।',
+    'contact.email': 'Email करें',
+    'contact.call': 'Call करें',
+  }
+};
+
+(function initLangSwitcher() {
+  const allBtns = document.querySelectorAll('[data-lang]');
+  if (!allBtns.length) return;
+  let currentLang = 'en';
+
+  function applyLang(lang) {
+    const d = TRANSLATIONS[lang];
+    if (!d) return;
+    currentLang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (d[key] === undefined) return;
+      el.innerHTML = d[key];
+    });
+
+    allBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  }
+
+  allBtns.forEach(btn => {
+    btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  });
+})();
+
+// ── App image sliders ─────────────────────────────────────
+const APP_IMAGES = {
+  dei: [
+    'images/dreams/Screenshot (1098).png',
+    'images/dreams/Screenshot (1099).png',
+    'images/dreams/Screenshot (1100).png',
+    'images/dreams/Screenshot (1101).png',
+  ],
+  nn: [
+    'images/dreams/Screenshot (1102).png',
+    'images/dreams/Screenshot (1103).png',
+    'images/dreams/Screenshot (1104).png',
+    'images/dreams/Screenshot (1105).png',
+  ]
+};
+
+(function initAppSliders() {
+  const sliders = document.querySelectorAll('.app-img-slider');
+  if (!sliders.length) return;
+
+  sliders.forEach(slider => {
+    const id = slider.dataset.slider;
+    const track = slider.querySelector('.ais-track');
+    const slides = slider.querySelectorAll('.ais-slide');
+    const dotsEl = slider.querySelector('.ais-dots');
+    const prevBtn = slider.querySelector('.ais-prev');
+    const nextBtn = slider.querySelector('.ais-next');
+    const total = slides.length;
+    if (!total) return;
+
+    let current = 0;
+    let autoTimer = null;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'ais-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+      dotsEl.appendChild(dot);
+    });
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      slider.dataset.currentSlide = current;
+      slider.querySelectorAll('.ais-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 3500); }
+    function stopAuto() { clearInterval(autoTimer); }
+
+    prevBtn.addEventListener('click', e => { e.stopPropagation(); stopAuto(); goTo(current - 1); startAuto(); });
+    nextBtn.addEventListener('click', e => { e.stopPropagation(); stopAuto(); goTo(current + 1); startAuto(); });
+
+    // Click on slider image area → open gallery popup
+    const track2 = slider.querySelector('.ais-track');
+    track2.addEventListener('click', () => openGalleryPopup(id, current));
+    track2.style.cursor = 'zoom-in';
+
+    // Touch swipe
+    let startX = 0;
+    slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; stopAuto(); }, { passive: true });
+    slider.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      startAuto();
+    }, { passive: true });
+
+    startAuto();
+  });
+})();
+
+// ── Image gallery popup ───────────────────────────────────
+let _galleryImages = [];
+let _galleryIdx = 0;
+
+function openGalleryPopup(appId, startIdx) {
+  _galleryImages = APP_IMAGES[appId] || [];
+  _galleryIdx = startIdx || 0;
+  const overlay = document.getElementById('galleryOverlay');
+  if (!overlay) return;
+  buildGalleryThumbs();
+  galleryShowSlide(_galleryIdx);
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function galleryShowSlide(idx) {
+  _galleryIdx = (_galleryIdx = ((idx % _galleryImages.length) + _galleryImages.length) % _galleryImages.length);
+  const img = document.getElementById('galleryMainImg');
+  const counter = document.getElementById('galleryCounter');
+  if (img) img.src = _galleryImages[_galleryIdx];
+  if (counter) counter.textContent = (_galleryIdx + 1) + ' / ' + _galleryImages.length;
+  document.querySelectorAll('.gpop-dot').forEach((d, i) => d.classList.toggle('active', i === _galleryIdx));
+  document.querySelectorAll('.gpop-thumb').forEach((t, i) => t.classList.toggle('active', i === _galleryIdx));
+}
+
+function buildGalleryThumbs() {
+  const dotsEl = document.getElementById('galleryDots');
+  const thumbsEl = document.getElementById('galleryThumbs');
+  if (!dotsEl || !thumbsEl) return;
+  dotsEl.innerHTML = '';
+  thumbsEl.innerHTML = '';
+  _galleryImages.forEach((src, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'gpop-dot';
+    dot.setAttribute('aria-label', 'Image ' + (i + 1));
+    dot.addEventListener('click', () => galleryShowSlide(i));
+    dotsEl.appendChild(dot);
+
+    const thumb = document.createElement('img');
+    thumb.src = src;
+    thumb.className = 'gpop-thumb';
+    thumb.alt = 'Screenshot ' + (i + 1);
+    thumb.addEventListener('click', () => galleryShowSlide(i));
+    thumbsEl.appendChild(thumb);
+  });
+}
+
+(function initGalleryPopupEvents() {
+  const overlay = document.getElementById('galleryOverlay');
+  if (!overlay) return;
+
+  function close() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('galleryClose').addEventListener('click', close);
+  overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+  document.getElementById('galleryPrev').addEventListener('click', () => galleryShowSlide(_galleryIdx - 1));
+  document.getElementById('galleryNext').addEventListener('click', () => galleryShowSlide(_galleryIdx + 1));
+
+  document.addEventListener('keydown', e => {
+    if (!overlay.classList.contains('active')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') galleryShowSlide(_galleryIdx - 1);
+    if (e.key === 'ArrowRight') galleryShowSlide(_galleryIdx + 1);
+  });
+})();
+
+// ── Scroll progress bar ─────────────────────────────────
+(function initScrollProgress() {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (docH > 0 ? (scrollTop / docH) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
+// ── Scroll-spy: highlight active nav link ───────────────
+(function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (!sections.length || !navLinks.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+
+  sections.forEach(s => obs.observe(s));
 })();
 
 // ── Init ───────────────────────────────────────────────
