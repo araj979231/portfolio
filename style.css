@@ -87,6 +87,60 @@ body {
 .float-slow { animation: floatY 6s ease-in-out infinite; }
 .float-med  { animation: floatY 4.5s ease-in-out infinite 1s; }
 
+/* ── Aurora background animation ── */
+@keyframes auroraFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%       { transform: translate(30px, -22px) scale(1.06); }
+  50%       { transform: translate(-15px, 18px) scale(0.97); }
+  75%       { transform: translate(20px, 10px) scale(1.03); }
+}
+@keyframes auroraFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(-25px, 20px) scale(1.08); }
+  66%       { transform: translate(18px, -15px) scale(0.94); }
+}
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 0.8; }
+}
+.hero-grid-bg {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(91,79,207,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91,79,207,0.055) 1px, transparent 1px);
+  background-size: 68px 68px;
+  mask-image: radial-gradient(ellipse 90% 85% at 50% 5%, black 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 5%, black 35%, transparent 100%);
+  animation: gridPulse 8s ease-in-out infinite;
+}
+.hero-aurora {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; z-index: 0;
+}
+.hero-aurora.ha1 {
+  width: 750px; height: 750px;
+  background: radial-gradient(circle, rgba(91,79,207,0.2) 0%, rgba(91,79,207,0.06) 45%, transparent 70%);
+  top: -220px; left: -160px;
+  filter: blur(64px);
+  animation: auroraFloat 22s ease-in-out infinite;
+}
+.hero-aurora.ha2 {
+  width: 620px; height: 620px;
+  background: radial-gradient(circle, rgba(124,58,237,0.17) 0%, rgba(124,58,237,0.04) 50%, transparent 70%);
+  top: 5%; right: -140px;
+  filter: blur(80px);
+  animation: auroraFloat2 28s ease-in-out infinite;
+  animation-delay: -9s;
+}
+.hero-aurora.ha3 {
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(99,102,241,0.14) 0%, transparent 65%);
+  bottom: -80px; left: 32%;
+  filter: blur(72px);
+  animation: auroraFloat 20s ease-in-out infinite;
+  animation-delay: -15s;
+}
+
 /* ── Staggered hero animation ── */
 .hero-badge    { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.1s both; }
 .hero h1       { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.22s both; }
@@ -372,6 +426,31 @@ section { padding: 7rem 3rem; }
   color: var(--text-muted); font-size: 0.95rem;
   line-height: 1.85; margin-bottom: 1.35rem;
 }
+/* ── Vision / Mission cards ── */
+.vm-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;
+  margin: 1.6rem 0 1.8rem;
+}
+.vm-card {
+  background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: 18px; padding: 1.35rem 1.25rem;
+  position: relative; overflow: hidden;
+  transition: all 0.32s cubic-bezier(0.22,1,0.36,1);
+}
+.vm-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(91,79,207,0.05) 0%, transparent 65%);
+  opacity: 0; transition: opacity 0.32s;
+}
+.vm-card:hover { border-color: var(--violet-border); box-shadow: 0 6px 28px rgba(91,79,207,0.1); transform: translateY(-2px); }
+.vm-card:hover::before { opacity: 1; }
+.vm-icon { font-size: 1.5rem; margin-bottom: 0.6rem; line-height: 1; }
+.vm-card-title {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
+  color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.45rem;
+}
+.vm-card-text { font-size: 0.78rem; color: var(--text-muted); line-height: 1.72; }
+
 .about-contact-list { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.75rem; }
 .about-contact-item {
   display: flex; align-items: center; gap: 0.75rem;
