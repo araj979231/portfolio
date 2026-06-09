@@ -8,7 +8,7 @@ const WORK_DATA = [
   {
     domain: "IT Company",
     title: "Dreams Technology",
-    desc: "Full corporate website for Dreams Technology — a software services company. Showcases services like web development, app development, CRM solutions, team profiles, and a portfolio of client work with an inquiry management system.",
+    desc: "A sleek, conversion-driven corporate website for a full-service software firm. Powered by a Laravel CMS, it showcases services, a live project portfolio, and team profiles — backed by a smart inquiry system that turns every visit into a business lead.",
     features: ["Service Showcase", "Portfolio Section", "Team Profiles", "Contact & Inquiry", "Admin Panel"],
     url: "https://www.dreams-technology.com/",
     urlText: "dreams-technology.com",
@@ -16,6 +16,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 55%, #2563eb 100%)",
     accent: "#3b82f6",
     c: ["#3b82f6", "#1d4ed8", "#2563eb"],
+    imgs: [
+      "images/dreams/Screenshot (1098).png",
+      "images/dreams/Screenshot (1101).png",
+      "images/dreams/Screenshot (1104).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Services Page", layout: "cards" },
@@ -25,7 +30,7 @@ const WORK_DATA = [
   {
     domain: "Banking & Finance",
     title: "SNCS Sachivalay Gujarat",
-    desc: "Full-scale cooperative banking platform managing loans (personal, home, vehicle), recurring deposits, fixed deposits, membership management, EMI scheduling, and real-time ledger reconciliation — handling 50,000+ daily transactions.",
+    desc: "A battle-tested cooperative banking platform built to bank-grade standards — managing 50,000+ daily transactions. Covers personal, home & vehicle loans, FDs, RDs, membership management, EMI scheduling, and real-time ledger reconciliation.",
     features: ["Loan Management", "Recurring Deposits", "FD & RD System", "Membership Portal", "Ledger & Reports"],
     url: "https://sncsgujarat.org/",
     urlText: "sncsgujarat.org",
@@ -33,6 +38,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #14532d 0%, #064e3b 55%, #16a34a 100%)",
     accent: "#22c55e",
     c: ["#16a34a", "#15803d", "#166534"],
+    imgs: [
+      "images/snsc/Screenshot (1106).png",
+      "images/snsc/Screenshot (1108).png",
+      "images/snsc/Screenshot (1110).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Dashboard", layout: "dashboard" },
@@ -42,7 +52,7 @@ const WORK_DATA = [
   {
     domain: "Job Portal",
     title: "DeiChampion",
-    desc: "Feature-rich job portal connecting recruiters and candidates. Includes real-time job listings, advanced candidate filtering, application tracking, subscription plans, coin-based access system, and dual-dashboard for employers and job seekers.",
+    desc: "A full-featured SaaS job portal connecting ambitious recruiters with top talent. Dual dashboards for employers and job seekers, smart candidate filtering, real-time listings, application tracking, subscription plans, and a coin-based access economy.",
     features: ["Job Listings", "Candidate Profiles", "Recruiter Dashboard", "Subscription Plans", "Real-time Chat"],
     url: "https://deichampion.com/",
     urlText: "deichampion.com",
@@ -50,6 +60,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #1e1b4b 0%, #312e81 55%, #7c3aed 100%)",
     accent: "#a78bfa",
     c: ["#7c3aed", "#6d28d9", "#4c1d95"],
+    imgs: [
+      "images/dei/Screenshot (1114).png",
+      "images/dei/Screenshot (1116).png",
+      "images/dei/Screenshot (1118).png"
+    ],
     slides: [
       { label: "Job Listings", layout: "list" },
       { label: "Candidate Profile", layout: "profile" },
@@ -59,7 +74,7 @@ const WORK_DATA = [
   {
     domain: "Real Estate",
     title: "Auricity",
-    desc: "Modern real estate platform for property listings, buying, selling, and renting. Features property search with advanced filters (location, budget, type), agent profiles, virtual tour support, lead management, and a powerful admin CRM.",
+    desc: "A high-performance real estate platform built for scale and lead generation. Advanced search by location, budget & property type, agent profiles, virtual tour support, and a CRM-powered lead pipeline — delivering a 40% jump in qualified inquiries.",
     features: ["Property Listings", "Advanced Search & Filters", "Agent Profiles", "Lead CRM", "Admin Dashboard"],
     url: "https://auricity.com/",
     urlText: "auricity.com",
@@ -67,6 +82,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #1c1917 0%, #44403c 55%, #d97706 100%)",
     accent: "#f59e0b",
     c: ["#d97706", "#b45309", "#92400e"],
+    imgs: [
+      "images/auricity/Screenshot (1121).png",
+      "images/auricity/Screenshot (1124).png",
+      "images/auricity/Screenshot (1127).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Property Listings", layout: "grid" },
@@ -76,7 +96,7 @@ const WORK_DATA = [
   {
     domain: "IT Company",
     title: "Mustit Services",
-    desc: "Professional website for Mustit Services, an IT solutions company. Presents their software services, project portfolio, client success stories, and includes a lead-capture system with inquiry forms and a full-featured backend admin panel.",
+    desc: "A sharp B2B website for a growing IT services company. Service showcases, detailed case studies, and client testimonials combined with a built-in lead-capture pipeline — turning every site visit into a qualified business inquiry automatically.",
     features: ["Service Portfolio", "Lead Capture", "Case Studies", "Admin Panel", "Client Testimonials"],
     url: "https://mustitservices.com/",
     urlText: "mustitservices.com",
@@ -84,6 +104,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #0c1445 0%, #1a237e 55%, #1565c0 100%)",
     accent: "#60a5fa",
     c: ["#1565c0", "#0d47a1", "#1e40af"],
+    imgs: [
+      "images/mustit/Screenshot (1129).png",
+      "images/mustit/Screenshot (1132).png",
+      "images/mustit/Screenshot (1135).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Services", layout: "cards" },
@@ -93,7 +118,7 @@ const WORK_DATA = [
   {
     domain: "FoodTech",
     title: "NutritionNook",
-    desc: "Swiggy-style food ordering platform with multi-restaurant support, real-time order tracking, GPS delivery management, wallet & payment gateway integration, push notifications, and role-based dashboards for restaurants, delivery partners, and admins.",
+    desc: "A Swiggy-grade food delivery ecosystem with multi-restaurant support, GPS real-time order tracking, wallet & payment gateway integration, and push notifications — with dedicated dashboards for restaurants, delivery partners, and admins.",
     features: ["Multi-restaurant", "Real-time Tracking", "GPS Delivery", "Wallet & Payments", "Push Notifications"],
     url: "https://nutritionnook.net/",
     urlText: "nutritionnook.net",
@@ -101,6 +126,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #1a0a00 0%, #7c2d12 55%, #ea580c 100%)",
     accent: "#fb923c",
     c: ["#ea580c", "#c2410c", "#9a3412"],
+    imgs: [
+      "images/nutrition/Screenshot (1139).png",
+      "images/nutrition/Screenshot (1142).png",
+      "images/nutrition/Screenshot (1145).png"
+    ],
     slides: [
       { label: "Restaurant Listing", layout: "grid" },
       { label: "Order Tracking", layout: "tracking" },
@@ -110,7 +140,7 @@ const WORK_DATA = [
   {
     domain: "Food & FMCG",
     title: "Saucy Mahi",
-    desc: "Brand website and e-commerce platform for Saucy Mahi, a premium food sauce brand. Features product catalog, online ordering, bulk order inquiries, brand storytelling pages, and a distribution partner portal with backend management.",
+    desc: "A premium D2C brand website and e-commerce platform for a fast-growing sauce brand. Curated product catalog, seamless online ordering, bulk inquiry management, a brand storytelling experience, and a dedicated distributor partner portal.",
     features: ["Product Catalog", "Online Ordering", "Bulk Inquiries", "Brand Story", "Distributor Portal"],
     url: "https://saucymahi.co/",
     urlText: "saucymahi.co",
@@ -118,6 +148,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #450a0a 0%, #991b1b 55%, #dc2626 100%)",
     accent: "#f87171",
     c: ["#dc2626", "#b91c1c", "#991b1b"],
+    imgs: [
+      "images/saucymahi/Screenshot (1148).png",
+      "images/saucymahi/Screenshot (1150).png",
+      "images/saucymahi/Screenshot (1152).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Product Catalog", layout: "grid" },
@@ -127,7 +162,7 @@ const WORK_DATA = [
   {
     domain: "Solar & Energy",
     title: "Helios Natural",
-    desc: "Corporate & lead-generation website for a solar energy business. Covers residential and commercial solar solutions, product catalog (panels, inverters, batteries), ROI calculator, government subsidy information, and project enquiry management system.",
+    desc: "A high-converting solar energy website engineered for lead generation. Covers residential & commercial solutions, a full product catalog, ROI calculator, government subsidy guides, and a backend inquiry pipeline — all in one polished platform.",
     features: ["Solar Products", "ROI Calculator", "Project Gallery", "Subsidy Info", "Lead Management"],
     url: "https://www.heliosnatural.com/",
     urlText: "heliosnatural.com",
@@ -135,6 +170,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #052e16 0%, #14532d 55%, #16a34a 100%)",
     accent: "#86efac",
     c: ["#16a34a", "#15803d", "#14532d"],
+    imgs: [
+      "images/heliousnatural/Screenshot (1153).png",
+      "images/heliousnatural/Screenshot (1156).png",
+      "images/heliousnatural/Screenshot (1159).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Products", layout: "cards" },
@@ -144,7 +184,7 @@ const WORK_DATA = [
   {
     domain: "Education",
     title: "Hillwoods School",
-    desc: "Premium school website for Hillwoods School with an online admissions portal, academic calendar, teacher profiles, event management, gallery, circular/notice board, and a parent-student communication portal with secure login.",
+    desc: "A feature-rich school platform bringing modern EdTech to traditional schooling. Online admissions, academic calendars, teacher profiles, event management, digital notice boards, and a secure parent-student communication portal — all in one.",
     features: ["Online Admissions", "Academic Calendar", "Teacher Profiles", "Event Management", "Parent Portal"],
     url: "https://www.hillwoodsschool.com/",
     urlText: "hillwoodsschool.com",
@@ -152,6 +192,11 @@ const WORK_DATA = [
     bg: "linear-gradient(135deg, #1e1b4b 0%, #4338ca 55%, #6366f1 100%)",
     accent: "#818cf8",
     c: ["#6366f1", "#4f46e5", "#4338ca"],
+    imgs: [
+      "images/hillswood/Screenshot (1160).png",
+      "images/hillswood/Screenshot (1163).png",
+      "images/hillswood/Screenshot (1166).png"
+    ],
     slides: [
       { label: "Homepage", layout: "hero" },
       { label: "Admissions Portal", layout: "form" },
@@ -163,6 +208,30 @@ const WORK_DATA = [
 // ── Generate a single slide mockup HTML ─────────────────────
 function buildSlide(data, slideIndex) {
   const { bg, accent, c, slides } = data;
+
+  // Use real screenshot if available
+  if (data.imgs && data.imgs[slideIndex]) {
+    return `
+    <div class="lb-slide" style="">
+      <div style="width:100%;height:100%;background:${bg};position:relative;overflow:hidden;display:flex;flex-direction:column;">
+        <div class="lb-slide-label">${slides[slideIndex].label}</div>
+        <div style="display:flex;align-items:center;padding:10px 16px 0;gap:5px;flex-shrink:0;">
+          <div style="width:7px;height:7px;border-radius:50%;background:#ef4444;"></div>
+          <div style="width:7px;height:7px;border-radius:50%;background:#f59e0b;"></div>
+          <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;"></div>
+          <div style="flex:1;height:14px;background:rgba(255,255,255,0.14);border-radius:100px;margin:0 6px;display:flex;align-items:center;padding:0 8px;">
+            <div style="height:6px;width:55%;background:rgba(255,255,255,0.25);border-radius:3px;"></div>
+          </div>
+        </div>
+        <div style="flex:1;overflow:hidden;margin:8px 10px 10px;border-radius:8px;">
+          <img src="${data.imgs[slideIndex]}"
+            style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"
+            alt="${data.title} - ${slides[slideIndex].label}" loading="lazy">
+        </div>
+      </div>
+    </div>`;
+  }
+
   const [c1, c2, c3] = c;
   const layout = slides[slideIndex].layout;
 
@@ -342,8 +411,27 @@ function buildSlide(data, slideIndex) {
 
 // ── Build small card mockup ────────────────────────────
 function buildCardMockup(data) {
-  const [c1,c2,c3] = data.c;
   const acc = data.accent;
+
+  // Use real screenshot for card preview if available
+  if (data.imgs && data.imgs[0]) {
+    return `
+    <div class="work-mockup" style="background:${data.bg};display:flex;flex-direction:column;">
+      <div class="mockup-bar">
+        <div class="mockup-dot" style="background:#ef4444;"></div>
+        <div class="mockup-dot" style="background:#f59e0b;"></div>
+        <div class="mockup-dot" style="background:#22c55e;"></div>
+        <div class="mockup-url"><span class="mockup-url-text">${data.urlText}</span></div>
+      </div>
+      <div style="flex:1;overflow:hidden;">
+        <img src="${data.imgs[0]}"
+          style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"
+          alt="${data.title}" loading="lazy">
+      </div>
+    </div>`;
+  }
+
+  const [c1,c2,c3] = data.c;
   return `
     <div class="work-mockup" style="background:${data.bg};">
       <div class="mockup-bar">

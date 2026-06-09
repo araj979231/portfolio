@@ -321,14 +321,15 @@ nav.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.07); }
 }
 .stat-num {
   font-family: 'Syne', sans-serif;
-  font-size: 2.3rem; font-weight: 800;
+  font-size: 3rem; font-weight: 700;
   color: var(--text); line-height: 1;
+  letter-spacing: -0.02em;
 }
-.stat-num em { color: var(--violet); font-style: normal; }
+.stat-num em { color: var(--violet); font-style: normal; font-weight: 700; }
 .stat-label {
-  font-size: 0.77rem; color: var(--text-muted);
-  text-transform: uppercase; letter-spacing: 0.09em;
-  margin-top: 0.3rem; font-weight: 600;
+  font-size: 0.75rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-top: 0.4rem; font-weight: 500;
 }
 
 /* ════════════════════════════════════════
