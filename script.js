@@ -18,8 +18,13 @@ const WORK_DATA = [
     c: ["#3b82f6", "#1d4ed8", "#2563eb"],
     imgs: [
       "images/dreams/Screenshot (1098).png",
+      "images/dreams/Screenshot (1099).png",
+      "images/dreams/Screenshot (1100).png",
       "images/dreams/Screenshot (1101).png",
-      "images/dreams/Screenshot (1104).png"
+      "images/dreams/Screenshot (1102).png",
+      "images/dreams/Screenshot (1103).png",
+      "images/dreams/Screenshot (1104).png",
+      "images/dreams/Screenshot (1105).png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -40,8 +45,11 @@ const WORK_DATA = [
     c: ["#16a34a", "#15803d", "#166534"],
     imgs: [
       "images/snsc/Screenshot (1106).png",
+      "images/snsc/Screenshot (1107).png",
       "images/snsc/Screenshot (1108).png",
-      "images/snsc/Screenshot (1110).png"
+      "images/snsc/Screenshot (1109).png",
+      "images/snsc/Screenshot (1110).png",
+      "images/snsc/Screenshot (1111).png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -62,8 +70,12 @@ const WORK_DATA = [
     c: ["#7c3aed", "#6d28d9", "#4c1d95"],
     imgs: [
       "images/dei/Screenshot (1114).png",
+      "images/dei/Screenshot (1115).png",
       "images/dei/Screenshot (1116).png",
-      "images/dei/Screenshot (1118).png"
+      "images/dei/Screenshot (1117).png",
+      "images/dei/Screenshot (1118).png",
+      "images/dei/Screenshot (1119).png",
+      "images/dei/Screenshot (1120).png"
     ],
     slides: [
       { label: "Job Listings", layout: "list" },
@@ -84,8 +96,13 @@ const WORK_DATA = [
     c: ["#d97706", "#b45309", "#92400e"],
     imgs: [
       "images/auricity/Screenshot (1121).png",
+      "images/auricity/Screenshot (1122).png",
+      "images/auricity/Screenshot (1123).png",
       "images/auricity/Screenshot (1124).png",
-      "images/auricity/Screenshot (1127).png"
+      "images/auricity/Screenshot (1125).png",
+      "images/auricity/Screenshot (1126).png",
+      "images/auricity/Screenshot (1127).png",
+      "images/auricity/Screenshot (1128).png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -106,8 +123,14 @@ const WORK_DATA = [
     c: ["#1565c0", "#0d47a1", "#1e40af"],
     imgs: [
       "images/mustit/Screenshot (1129).png",
+      "images/mustit/Screenshot (1130).png",
+      "images/mustit/Screenshot (1131).png",
       "images/mustit/Screenshot (1132).png",
-      "images/mustit/Screenshot (1135).png"
+      "images/mustit/Screenshot (1133).png",
+      "images/mustit/Screenshot (1134).png",
+      "images/mustit/Screenshot (1135).png",
+      "images/mustit/Screenshot (1136).png",
+      "images/mustit/Screenshot (1137).png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -128,8 +151,14 @@ const WORK_DATA = [
     c: ["#ea580c", "#c2410c", "#9a3412"],
     imgs: [
       "images/nutrition/Screenshot (1139).png",
+      "images/nutrition/Screenshot (1140).png",
+      "images/nutrition/Screenshot (1141).png",
       "images/nutrition/Screenshot (1142).png",
-      "images/nutrition/Screenshot (1145).png"
+      "images/nutrition/Screenshot (1143).png",
+      "images/nutrition/Screenshot (1144).png",
+      "images/nutrition/Screenshot (1145).png",
+      "images/nutrition/Screenshot (1146).png",
+      "images/nutrition/Screenshot (1147).png"
     ],
     slides: [
       { label: "Restaurant Listing", layout: "grid" },
@@ -150,7 +179,9 @@ const WORK_DATA = [
     c: ["#dc2626", "#b91c1c", "#991b1b"],
     imgs: [
       "images/saucymahi/Screenshot (1148).png",
+      "images/saucymahi/Screenshot (1149).png",
       "images/saucymahi/Screenshot (1150).png",
+      "images/saucymahi/Screenshot (1151).png",
       "images/saucymahi/Screenshot (1152).png"
     ],
     slides: [
@@ -172,7 +203,11 @@ const WORK_DATA = [
     c: ["#16a34a", "#15803d", "#14532d"],
     imgs: [
       "images/heliousnatural/Screenshot (1153).png",
+      "images/heliousnatural/Screenshot (1154).png",
+      "images/heliousnatural/Screenshot (1155).png",
       "images/heliousnatural/Screenshot (1156).png",
+      "images/heliousnatural/Screenshot (1157).png",
+      "images/heliousnatural/Screenshot (1158).png",
       "images/heliousnatural/Screenshot (1159).png"
     ],
     slides: [
@@ -194,8 +229,13 @@ const WORK_DATA = [
     c: ["#6366f1", "#4f46e5", "#4338ca"],
     imgs: [
       "images/hillswood/Screenshot (1160).png",
+      "images/hillswood/Screenshot (1161).png",
+      "images/hillswood/Screenshot (1162).png",
       "images/hillswood/Screenshot (1163).png",
-      "images/hillswood/Screenshot (1166).png"
+      "images/hillswood/Screenshot (1164).png",
+      "images/hillswood/Screenshot (1165).png",
+      "images/hillswood/Screenshot (1166).png",
+      "images/hillswood/Screenshot (1167).png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -458,25 +498,31 @@ const track        = document.getElementById('workTrack');
 const dotsWrap     = document.getElementById('sliderDots');
 const btnPrev      = document.getElementById('btnPrev');
 const btnNext      = document.getElementById('btnNext');
-const overlay      = document.getElementById('lightboxOverlay');
-const lbUrlText    = document.getElementById('lbUrlText');
-const lbVisit      = document.getElementById('lbVisit');
-const lbVisitBtn   = document.getElementById('lbVisitBtn');
-const lbDomain     = document.getElementById('lbDomain');
-const lbName       = document.getElementById('lbName');
-const lbDesc       = document.getElementById('lbDesc');
-const lbFeatures   = document.getElementById('lbFeatures');
-const lbSlides     = document.getElementById('lbSlides');
-const lbGalleryDots= document.getElementById('lbGalleryDots');
-const lbThumbsWrap = document.getElementById('lbThumbs');
-const lbCounter    = document.getElementById('lbCounter');
-const lbNavPrev    = document.getElementById('lbNavPrev');
-const lbNavNext    = document.getElementById('lbNavNext');
 
-let sliderIndex   = 0;
-let lightboxIndex = 0;
-let gallerySlide  = 0;
-const CARD_W      = 380 + 20;
+// ── Case study overlay DOM refs ─────────────────────────
+const csOverlay     = document.getElementById('csOverlay');
+const csClose       = document.getElementById('csClose');
+const csCloseX      = document.getElementById('csCloseX');
+const csGallery     = document.getElementById('csGallery');
+const csCounter     = document.getElementById('csCounter');
+const csDomain      = document.getElementById('csDomain');
+const csTitle       = document.getElementById('csTitle');
+const csDesc        = document.getElementById('csDesc');
+const csFeaturesList= document.getElementById('csFeaturesList');
+const csTechTags    = document.getElementById('csTechTags');
+const csVisitBtn    = document.getElementById('csVisitBtn');
+const csUrlText     = document.getElementById('csUrlText');
+const csScreenCount = document.getElementById('csScreenCount');
+const csThumbs      = document.getElementById('csThumbs');
+const csProjPrev    = document.getElementById('csProjPrev');
+const csProjNext    = document.getElementById('csProjNext');
+const csZoomBg      = document.getElementById('csZoomBg');
+const csZoomImg     = document.getElementById('csZoomImg');
+const csZoomClose   = document.getElementById('csZoomClose');
+
+let sliderIndex = 0;
+let csIndex     = 0;
+const CARD_W    = 380 + 20;
 
 // ── Build slider cards ─────────────────────────────────
 function buildCards() {
@@ -491,7 +537,7 @@ function buildCards() {
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
         </div>
         <div class="overlay-label">View Details</div>
-        <div class="overlay-sub">3 screens inside</div>
+        <div class="overlay-sub">${site.imgs.length} screens inside</div>
       </div>
       <div class="work-card-info">
         <div class="work-card-domain">${site.domain}</div>
@@ -504,7 +550,7 @@ function buildCards() {
           </a>
         </div>
       </div>`;
-    card.addEventListener('click', () => openLightbox(i));
+    card.addEventListener('click', () => openCaseStudy(i));
     track.appendChild(card);
   });
 }
@@ -519,15 +565,17 @@ function buildSliderDots() {
   });
 }
 
-function buildThumbs() {
+function buildCsThumbs() {
   WORK_DATA.forEach((site, i) => {
     const thumb = document.createElement('div');
-    thumb.className = 'lb-thumb' + (i === 0 ? ' active' : '');
-    thumb.innerHTML = `
-      <div class="lb-thumb-inner" style="background:${site.bg};"></div>
-      <div class="lb-thumb-label">${site.title.split(' ')[0]}</div>`;
-    thumb.addEventListener('click', () => navigateLightbox(i));
-    lbThumbsWrap.appendChild(thumb);
+    thumb.className = 'cs-thumb' + (i === 0 ? ' active' : '');
+    thumb.title = site.title;
+    const img = site.imgs && site.imgs[0]
+      ? `<img src="${site.imgs[0]}" alt="${site.title}" loading="lazy">`
+      : `<div style="width:100%;height:100%;background:${site.bg};border-radius:5px;"></div>`;
+    thumb.innerHTML = `${img}<div class="cs-thumb-label"><span>${site.title.split(' ')[0]}</span></div>`;
+    thumb.addEventListener('click', () => navigateCaseStudy(i));
+    csThumbs.appendChild(thumb);
   });
 }
 
@@ -551,102 +599,128 @@ track.addEventListener('touchend', e => {
   if (Math.abs(dx) > 40) dx < 0 ? goToSlide(sliderIndex+1) : goToSlide(sliderIndex-1);
 }, {passive:true});
 
-// ── Lightbox ───────────────────────────────────────────
-function openLightbox(projectIdx) {
-  lightboxIndex = projectIdx;
-  gallerySlide  = 0;
-  buildGallery();
-  updateLightboxInfo();
-  overlay.classList.add('open');
+// ── Case Study Overlay ─────────────────────────────────
+function openCaseStudy(idx) {
+  csIndex = idx;
+  buildCsGallery();
+  updateCsInfo();
+  csOverlay.classList.add('open');
   document.body.style.overflow = 'hidden';
+  csGallery.scrollTop = 0;
 }
 
-function closeLightbox() {
-  overlay.classList.remove('open');
+function closeCaseStudy() {
+  csOverlay.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-function navigateLightbox(projectIdx) {
-  lightboxIndex = Math.max(0, Math.min(projectIdx, WORK_DATA.length - 1));
-  gallerySlide  = 0;
-  buildGallery();
-  updateLightboxInfo();
+function navigateCaseStudy(idx) {
+  csIndex = Math.max(0, Math.min(idx, WORK_DATA.length - 1));
+  buildCsGallery();
+  updateCsInfo();
+  csGallery.scrollTop = 0;
 }
 
-// Build the 3 image slides for current project
-function buildGallery() {
-  const data = WORK_DATA[lightboxIndex];
-  lbSlides.innerHTML = '';
-  lbGalleryDots.innerHTML = '';
+function buildCsGallery() {
+  const data = WORK_DATA[csIndex];
+  const imgs  = data.imgs || [];
+  const [hero, ...rest] = imgs;
+  let html = '';
 
-  data.slides.forEach((_, si) => {
-    lbSlides.insertAdjacentHTML('beforeend', buildSlide(data, si));
-    const dot = document.createElement('button');
-    dot.className = 'lb-gallery-dot' + (si === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goToGallerySlide(si));
-    lbGalleryDots.appendChild(dot);
-  });
-  goToGallerySlide(0);
-}
-
-function goToGallerySlide(idx) {
-  gallerySlide = Math.max(0, Math.min(idx, WORK_DATA[lightboxIndex].slides.length - 1));
-  lbSlides.style.transform = `translateX(-${gallerySlide * 100}%)`;
-  document.querySelectorAll('.lb-gallery-dot').forEach((d, i) => d.classList.toggle('active', i === gallerySlide));
-  lbNavPrev.disabled = gallerySlide === 0;
-  lbNavNext.disabled = gallerySlide === WORK_DATA[lightboxIndex].slides.length - 1;
-}
-
-function updateLightboxInfo() {
-  const site = WORK_DATA[lightboxIndex];
-  lbUrlText.textContent   = site.urlText;
-  lbVisit.href            = site.url;
-  lbVisitBtn.href         = site.url;
-  lbDomain.textContent    = site.domain;
-  lbName.textContent      = site.title;
-  lbDesc.textContent      = site.desc;
-  lbCounter.textContent   = `${lightboxIndex + 1} / ${WORK_DATA.length}`;
-  lbFeatures.innerHTML    = site.features.map(f => `<span class="lb-feature-tag">${f}</span>`).join('');
-
-  document.querySelectorAll('.lb-thumb').forEach((t, i) => {
-    t.classList.toggle('active', i === lightboxIndex);
-    if (i === lightboxIndex) t.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
-  });
-}
-
-lbNavPrev.addEventListener('click', () => {
-  if (gallerySlide > 0) { goToGallerySlide(gallerySlide - 1); }
-});
-lbNavNext.addEventListener('click', () => {
-  if (gallerySlide < WORK_DATA[lightboxIndex].slides.length - 1) { goToGallerySlide(gallerySlide + 1); }
-});
-
-document.getElementById('lbClose').addEventListener('click', closeLightbox);
-overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
-document.getElementById('lbProjPrev').addEventListener('click', () => navigateLightbox(lightboxIndex - 1));
-document.getElementById('lbProjNext').addEventListener('click', () => navigateLightbox(lightboxIndex + 1));
-
-// Keyboard nav — arrows cycle through gallery slides, shift+arrow cycles projects
-window.addEventListener('keydown', e => {
-  if (!overlay.classList.contains('open')) return;
-  if (e.key === 'Escape') { closeLightbox(); return; }
-  if (e.shiftKey) {
-    if (e.key === 'ArrowLeft')  navigateLightbox(lightboxIndex - 1);
-    if (e.key === 'ArrowRight') navigateLightbox(lightboxIndex + 1);
-  } else {
-    if (e.key === 'ArrowLeft')  goToGallerySlide(gallerySlide - 1);
-    if (e.key === 'ArrowRight') goToGallerySlide(gallerySlide + 1);
+  if (hero) {
+    html += `<div class="cs-img-hero" data-src="${hero}">
+      <img src="${hero}" alt="${data.title} screen 1" loading="eager">
+    </div>`;
   }
+
+  if (rest.length) {
+    html += '<div class="cs-img-grid">';
+    rest.forEach((src, i) => {
+      html += `<div class="cs-img-card" data-src="${src}">
+        <img src="${src}" alt="${data.title} screen ${i + 2}" loading="lazy">
+        <div class="cs-img-num">${String(i + 2).padStart(2,'0')}</div>
+      </div>`;
+    });
+    html += '</div>';
+  }
+
+  html += `<div class="cs-gallery-cta">
+    <h3>Want something like this?</h3>
+    <p>I build production-grade platforms tailored to your business. Let's create yours.</p>
+    <a href="mailto:araj979231@gmail.com">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+      Let's Work Together
+    </a>
+  </div>`;
+
+  csGallery.innerHTML = html;
+
+  csGallery.querySelectorAll('[data-src]').forEach(el => {
+    el.addEventListener('click', () => openZoom(el.dataset.src));
+  });
+}
+
+function updateCsInfo() {
+  const site = WORK_DATA[csIndex];
+  const pad  = n => String(n).padStart(2, '0');
+
+  csCounter.textContent     = `${pad(csIndex + 1)} / ${pad(WORK_DATA.length)}`;
+  csDomain.textContent      = site.domain;
+  csTitle.textContent       = site.title;
+  csDesc.textContent        = site.desc;
+  csVisitBtn.href           = site.url;
+  csUrlText.textContent     = site.urlText;
+  csScreenCount.textContent = `${site.imgs.length} screens`;
+
+  csFeaturesList.innerHTML  = site.features.map(f => `<li>${f}</li>`).join('');
+  csTechTags.innerHTML      = site.tags.map(t => `<span class="cs-tech-tag">${t}</span>`).join('');
+
+  document.querySelectorAll('.cs-thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === csIndex);
+    if (i === csIndex) t.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  csProjPrev.disabled = csIndex === 0;
+  csProjNext.disabled = csIndex === WORK_DATA.length - 1;
+}
+
+function openZoom(src) {
+  csZoomImg.src = src;
+  csZoomBg.classList.add('open');
+}
+
+function closeZoom() {
+  csZoomBg.classList.remove('open');
+  setTimeout(() => { csZoomImg.src = ''; }, 250);
+}
+
+// Case study event listeners
+csClose.addEventListener('click', closeCaseStudy);
+csCloseX.addEventListener('click', closeCaseStudy);
+csProjPrev.addEventListener('click', () => navigateCaseStudy(csIndex - 1));
+csProjNext.addEventListener('click', () => navigateCaseStudy(csIndex + 1));
+csOverlay.addEventListener('click', e => { if (e.target === csOverlay) closeCaseStudy(); });
+csZoomClose.addEventListener('click', closeZoom);
+csZoomBg.addEventListener('click', e => { if (e.target === csZoomBg) closeZoom(); });
+
+window.addEventListener('keydown', e => {
+  if (csZoomBg.classList.contains('open')) {
+    if (e.key === 'Escape') closeZoom();
+    return;
+  }
+  if (!csOverlay.classList.contains('open')) return;
+  if (e.key === 'Escape')      closeCaseStudy();
+  if (e.key === 'ArrowLeft')   navigateCaseStudy(csIndex - 1);
+  if (e.key === 'ArrowRight')  navigateCaseStudy(csIndex + 1);
 });
 
-// Touch swipe on lightbox (gallery slides)
-let lbTx = 0;
-document.querySelector && (() => {})();
-overlay.addEventListener('touchstart', e => { lbTx = e.changedTouches[0].clientX; }, {passive:true});
-overlay.addEventListener('touchend', e => {
-  const dx = e.changedTouches[0].clientX - lbTx;
-  if (Math.abs(dx) > 45) dx < 0 ? goToGallerySlide(gallerySlide+1) : goToGallerySlide(gallerySlide-1);
-}, {passive:true});
+// Touch swipe on overlay to navigate projects
+let csTx = 0;
+csOverlay.addEventListener('touchstart', e => { csTx = e.changedTouches[0].clientX; }, { passive: true });
+csOverlay.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - csTx;
+  if (Math.abs(dx) > 55) dx < 0 ? navigateCaseStudy(csIndex + 1) : navigateCaseStudy(csIndex - 1);
+}, { passive: true });
 
 // ── Scroll reveal ──────────────────────────────────────
 const revObs = new IntersectionObserver(entries => {
@@ -685,7 +759,7 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
   buildCards();
   buildSliderDots();
-  buildThumbs();
+  buildCsThumbs();
   goToSlide(0);
   document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
   initCounters();
