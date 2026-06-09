@@ -755,6 +755,35 @@ window.addEventListener('scroll', () => {
   document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 20);
 }, {passive:true});
 
+// ── Mobile Menu ────────────────────────────────────────
+(function() {
+  const hamburger = document.getElementById('navHamburger');
+  const menu      = document.getElementById('mobileMenu');
+  const overlay   = document.getElementById('mobileMenuOverlay');
+  const closeBtn  = document.getElementById('mobileMenuClose');
+
+  function openMenu() {
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) hamburger.addEventListener('click', openMenu);
+  if (closeBtn)  closeBtn.addEventListener('click', closeMenu);
+  if (overlay)   overlay.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.mm-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+})();
+
 // ── Init ───────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   buildCards();
