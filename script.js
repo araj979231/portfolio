@@ -17,12 +17,16 @@ const WORK_DATA = [
     accent: "#a3e635",
     c: ["#65a30d", "#4d7c0f", "#3f6212"],
     imgs: [
-      "images/dreams/Screenshot (1098).png",
-      "images/dreams/Screenshot (1099).png",
-      "images/dreams/Screenshot (1100).png",
-      "images/dreams/Screenshot (1101).png",
-      "images/dreams/Screenshot (1102).png",
-      "images/dreams/Screenshot (1103).png"
+      "images/vani/varni-1.png",
+      "images/vani/varni-10.png",
+      "images/vani/varni-2.png",
+      "images/vani/varni-3.png",
+      "images/vani/varni-4.png",
+      "images/vani/varni-5.png",
+      "images/vani/varni-6.png",
+      "images/vani/varni-7.png",
+      "images/vani/varni-8.png",
+      "images/vani/varni-9.png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -42,12 +46,16 @@ const WORK_DATA = [
     accent: "#60a5fa",
     c: ["#2563eb", "#1d4ed8", "#1e40af"],
     imgs: [
-      "images/dreams/Screenshot (1100).png",
-      "images/dreams/Screenshot (1101).png",
-      "images/dreams/Screenshot (1102).png",
-      "images/dreams/Screenshot (1103).png",
-      "images/dreams/Screenshot (1104).png",
-      "images/dreams/Screenshot (1105).png"
+      "images/hrms/h-10.png",
+      "images/hrms/h-13.png",
+      "images/hrms/h-15.png",
+      "images/hrms/h-18.png",
+      "images/hrms/h-2.png",
+      "images/hrms/h-20.png",
+      "images/hrms/h-21.png",
+      "images/hrms/h-3.png",
+      "images/hrms/h-4.png",
+      "images/hrms/h-8.png"
     ],
     slides: [
       { label: "Dashboard", layout: "dashboard" },
@@ -67,11 +75,14 @@ const WORK_DATA = [
     accent: "#c4b5fd",
     c: ["#7c3aed", "#6d28d9", "#5b21b6"],
     imgs: [
-      "images/dreams/Screenshot (1098).png",
-      "images/dreams/Screenshot (1099).png",
-      "images/dreams/Screenshot (1103).png",
-      "images/dreams/Screenshot (1104).png",
-      "images/dreams/Screenshot (1105).png"
+      "images/fitness/e-1.png",
+      "images/fitness/e-2.png",
+      "images/fitness/e-3.png",
+      "images/fitness/e-4.png",
+      "images/fitness/e-5.png",
+      "images/fitness/e-6.png",
+      "images/fitness/e-7.png",
+      "images/fitness/e-8.png"
     ],
     slides: [
       { label: "Shop Homepage", layout: "hero" },
@@ -965,7 +976,7 @@ const TRANSLATIONS = {
   en: {
     'nav.hire': 'Hire Me →',
     'hero.badge': 'Available for New Projects',
-    'hero.sub': "I'm Abhishek — a Senior Full-Stack Developer who transforms your idea into a fully-functioning digital business. Strategy, design, backend, frontend, launch — I handle it all so you can focus on what matters: growing your business.",
+    'hero.sub': "We're Pravanjali Solutions — a full-stack digital agency that transforms ideas into revenue-generating businesses. Strategy, design, backend, frontend, launch — we handle everything so you can focus on what matters: growing your business.",
     'hero.cta1': 'Start Your Project →',
     'hero.cta2': 'See My Work',
     'hero.pill1': '⚡ PHP · Laravel · React',
@@ -973,8 +984,8 @@ const TRANSLATIONS = {
     'hero.pill3': '💰 Built for Revenue & Growth',
     'hero.pill4': '🔒 Scalable & Enterprise-Secure',
     'hero.pill5': '⭐ 30+ Live Products Shipped',
-    'about.chip': 'Who I Am',
-    'about.p1': "I'm Abhishek Raj — and I'll be honest with you. Most developers take your brief, disappear for weeks, and hand you something that technically runs but doesn't actually move your business forward. That's not how I work.",
+    'about.chip': 'Who We Are',
+    'about.p1': "We're Pravanjali Solutions — and we'll be honest with you. Most agencies take your brief, disappear for weeks, and hand you something that technically runs but doesn't actually move your business forward. That's not how we work.",
     'about.p2': "In 5+ years, I've shipped 30+ production platforms for real businesses — banking systems handling 50,000+ daily transactions, food delivery apps with live GPS tracking, real estate CRMs that doubled qualified leads, and AI-powered SaaS tools. Every platform is still live, still running, still generating revenue.",
     'about.p3': "I've built across virtually every domain: eCommerce stores that process thousands of orders daily, HRMS platforms managing full employee lifecycles, CRM systems that convert leads into loyal customers, CMS solutions, agricultural export portals, fitness retail platforms, and enterprise ERP dashboards. If your business has a workflow, I can digitise it.",
     'about.p4': "What makes me different: I think like a business owner, not just a coder. I ask why before I write a single line. I flag problems before they get expensive. And I stay in your corner long after launch day.",
