@@ -17,16 +17,12 @@ const WORK_DATA = [
     accent: "#a3e635",
     c: ["#65a30d", "#4d7c0f", "#3f6212"],
     imgs: [
-      "images/vani/varni-1.png",
-      "images/vani/varni-2.png",
-      "images/vani/varni-3.png",
-      "images/vani/varni-4.png",
-      "images/vani/varni-5.png",
-      "images/vani/varni-6.png",
-      "images/vani/varni-7.png",
-      "images/vani/varni-8.png",
-      "images/vani/varni-9.png",
-      "images/vani/varni-10.png",
+      "images/dreams/Screenshot (1098).png",
+      "images/dreams/Screenshot (1099).png",
+      "images/dreams/Screenshot (1100).png",
+      "images/dreams/Screenshot (1101).png",
+      "images/dreams/Screenshot (1102).png",
+      "images/dreams/Screenshot (1103).png"
     ],
     slides: [
       { label: "Homepage", layout: "hero" },
@@ -46,16 +42,12 @@ const WORK_DATA = [
     accent: "#60a5fa",
     c: ["#2563eb", "#1d4ed8", "#1e40af"],
     imgs: [
-      "images/hrms/h-10.png",
-      "images/hrms/h-13.png",
-      "images/hrms/h-15.png",
-      "images/hrms/h-18.png",
-      "images/hrms/h-2.png",
-      "images/hrms/h-20.png",
-      "images/hrms/h-21.png",
-      "images/hrms/h-3.png",
-      "images/hrms/h-4.png",
-      "images/hrms/h-8.png"
+      "images/dreams/Screenshot (1100).png",
+      "images/dreams/Screenshot (1101).png",
+      "images/dreams/Screenshot (1102).png",
+      "images/dreams/Screenshot (1103).png",
+      "images/dreams/Screenshot (1104).png",
+      "images/dreams/Screenshot (1105).png"
     ],
     slides: [
       { label: "Dashboard", layout: "dashboard" },
@@ -75,14 +67,11 @@ const WORK_DATA = [
     accent: "#c4b5fd",
     c: ["#7c3aed", "#6d28d9", "#5b21b6"],
     imgs: [
-      "images/fitness/e-1.png",
-      "images/fitness/e-2.png",
-      "images/fitness/e-3.png",
-      "images/fitness/e-4.png",
-      "images/fitness/e-5.png",
-      "images/fitness/e-6.png",
-      "images/fitness/e-7.png",
-      "images/fitness/e-8.png"
+      "images/dreams/Screenshot (1098).png",
+      "images/dreams/Screenshot (1099).png",
+      "images/dreams/Screenshot (1103).png",
+      "images/dreams/Screenshot (1104).png",
+      "images/dreams/Screenshot (1105).png"
     ],
     slides: [
       { label: "Shop Homepage", layout: "hero" },
@@ -607,7 +596,6 @@ const csZoomClose   = document.getElementById('csZoomClose');
 
 let sliderIndex = 0;
 let csIndex     = 0;
-const CARD_W    = 380 + 20;
 
 // ── Build slider cards ─────────────────────────────────
 function buildCards() {
@@ -665,24 +653,75 @@ function buildCsThumbs() {
 }
 
 // ── Slider ─────────────────────────────────────────────
-function goToSlide(idx) {
-  sliderIndex = Math.max(0, Math.min(idx, WORK_DATA.length - 1));
-  track.style.transform = `translateX(-${sliderIndex * CARD_W}px)`;
-  document.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === sliderIndex));
+const trackOuter     = document.getElementById('workTrackOuter');
+const sliderCurrEl   = document.getElementById('sliderCurr');
+const sliderTotalEl  = document.getElementById('sliderTotal');
+const sliderProgress = document.getElementById('sliderProgressBar');
+
+function padN(n) { return String(n).padStart(2, '0'); }
+
+function updateSliderUI() {
+  const total = WORK_DATA.length;
+  if (sliderCurrEl)  sliderCurrEl.textContent  = padN(sliderIndex + 1);
+  if (sliderTotalEl) sliderTotalEl.textContent = padN(total);
+  if (sliderProgress) sliderProgress.style.width = ((sliderIndex + 1) / total * 100) + '%';
   document.querySelectorAll('.work-card').forEach((c, i) => c.classList.toggle('active', i === sliderIndex));
   btnPrev.disabled = sliderIndex === 0;
   btnNext.disabled = sliderIndex === WORK_DATA.length - 1;
 }
 
+function goToSlide(idx) {
+  sliderIndex = Math.max(0, Math.min(idx, WORK_DATA.length - 1));
+  const cards = track.children;
+  if (cards[sliderIndex] && trackOuter) {
+    const card     = cards[sliderIndex];
+    const padLeft  = parseInt(getComputedStyle(track).paddingLeft) || 8;
+    trackOuter.scrollTo({ left: card.offsetLeft - padLeft, behavior: 'smooth' });
+  }
+  updateSliderUI();
+}
+
 btnPrev.addEventListener('click', () => goToSlide(sliderIndex - 1));
 btnNext.addEventListener('click', () => goToSlide(sliderIndex + 1));
 
-let tStartX = 0;
-track.addEventListener('touchstart', e => { tStartX = e.changedTouches[0].clientX; }, {passive:true});
-track.addEventListener('touchend', e => {
-  const dx = e.changedTouches[0].clientX - tStartX;
-  if (Math.abs(dx) > 40) dx < 0 ? goToSlide(sliderIndex+1) : goToSlide(sliderIndex-1);
-}, {passive:true});
+// Sync index when user finger-scrolls natively (scroll-snap)
+let _scrollTimer = null;
+if (trackOuter) {
+  trackOuter.addEventListener('scroll', () => {
+    clearTimeout(_scrollTimer);
+    _scrollTimer = setTimeout(() => {
+      const cards = Array.from(track.children);
+      if (!cards.length) return;
+      const outerRect = trackOuter.getBoundingClientRect();
+      let bestIdx = 0, bestDist = Infinity;
+      cards.forEach((c, i) => {
+        const dist = Math.abs(c.getBoundingClientRect().left - outerRect.left);
+        if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+      });
+      if (bestIdx !== sliderIndex) { sliderIndex = bestIdx; updateSliderUI(); }
+    }, 80);
+  }, { passive: true });
+}
+
+// Auto-advance every 5 s — pauses on hover
+let _autoSlide = null;
+function startAutoSlide() {
+  _autoSlide = setInterval(() => {
+    if (sliderIndex < WORK_DATA.length - 1) {
+      goToSlide(sliderIndex + 1);
+    } else {
+      // instant jump back to start, then animate forward on next tick
+      if (trackOuter) trackOuter.scrollTo({ left: 0 });
+      sliderIndex = 0;
+      updateSliderUI();
+    }
+  }, 5000);
+}
+function stopAutoSlide() { clearInterval(_autoSlide); }
+if (trackOuter) {
+  trackOuter.addEventListener('mouseenter', stopAutoSlide);
+  trackOuter.addEventListener('mouseleave', startAutoSlide);
+}
 
 // ── Case Study Overlay ─────────────────────────────────
 function openCaseStudy(idx) {
@@ -706,43 +745,76 @@ function navigateCaseStudy(idx) {
   csGallery.scrollTop = 0;
 }
 
+let _csisTimer = null;
+
 function buildCsGallery() {
-  const data = WORK_DATA[csIndex];
+  clearInterval(_csisTimer);
+  const data  = WORK_DATA[csIndex];
   const imgs  = data.imgs || [];
-  const [hero, ...rest] = imgs;
-  let html = '';
+  const total = imgs.length;
 
-  if (hero) {
-    html += `<div class="cs-img-hero" data-src="${hero}">
-      <img src="${hero}" alt="${data.title} screen 1" loading="eager">
+  csGallery.innerHTML = `
+    <div class="csis-wrap">
+      <div class="csis-track" id="csisTrack">
+        ${imgs.map((src, i) => `<img class="csis-slide" src="${src}" alt="${data.title} screen ${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}">`).join('')}
+      </div>
+      <button class="csis-arrow csis-prev" id="csisPrev" aria-label="Previous" ${total <= 1 ? 'disabled' : ''}>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="csis-arrow csis-next" id="csisNext" aria-label="Next" ${total <= 1 ? 'disabled' : ''}>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="csis-dots" id="csisDots"></div>
+      <div class="csis-counter" id="csisCounter">1 / ${total}</div>
     </div>`;
-  }
 
-  if (rest.length) {
-    html += '<div class="cs-img-grid">';
-    rest.forEach((src, i) => {
-      html += `<div class="cs-img-card" data-src="${src}">
-        <img src="${src}" alt="${data.title} screen ${i + 2}" loading="lazy">
-        <div class="cs-img-num">${String(i + 2).padStart(2,'0')}</div>
-      </div>`;
-    });
-    html += '</div>';
-  }
+  if (total <= 1) return;
 
-  html += `<div class="cs-gallery-cta">
-    <h3>Want something like this?</h3>
-    <p>I build production-grade platforms tailored to your business. Let's create yours.</p>
-    <a href="mailto:araj979231@gmail.com">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-      Let's Work Together
-    </a>
-  </div>`;
+  const csisTrack   = document.getElementById('csisTrack');
+  const csisDots    = document.getElementById('csisDots');
+  const csisCounter = document.getElementById('csisCounter');
+  const csisPrev    = document.getElementById('csisPrev');
+  const csisNext    = document.getElementById('csisNext');
+  let ci = 0;
 
-  csGallery.innerHTML = html;
-
-  csGallery.querySelectorAll('[data-src]').forEach(el => {
-    el.addEventListener('click', () => openZoom(el.dataset.src));
+  imgs.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'csis-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Image ${i + 1}`);
+    dot.addEventListener('click', () => csisGoTo(i));
+    csisDots.appendChild(dot);
   });
+
+  function csisGoTo(idx) {
+    ci = ((idx % total) + total) % total;
+    csisTrack.style.transform = `translateX(-${ci * 100}%)`;
+    csisCounter.textContent   = `${ci + 1} / ${total}`;
+    csisDots.querySelectorAll('.csis-dot').forEach((d, i) => d.classList.toggle('active', i === ci));
+    csisPrev.disabled = ci === 0;
+    csisNext.disabled = ci === total - 1;
+  }
+
+  csisPrev.addEventListener('click', () => { clearInterval(_csisTimer); csisGoTo(ci - 1); });
+  csisNext.addEventListener('click', () => { clearInterval(_csisTimer); csisGoTo(ci + 1); });
+
+  // Touch swipe — stopPropagation so csOverlay doesn't also fire project navigation
+  let sx = 0;
+  csisTrack.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, { passive: true });
+  csisTrack.addEventListener('touchend', e => {
+    e.stopPropagation();
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) csisGoTo(dx < 0 ? ci + 1 : ci - 1);
+  }, { passive: true });
+
+  // Auto-advance every 3.5 s
+  function startCsisAuto() {
+    _csisTimer = setInterval(() => csisGoTo(ci < total - 1 ? ci + 1 : 0), 3500);
+  }
+  const wrap = csGallery.querySelector('.csis-wrap');
+  wrap.addEventListener('mouseenter', () => clearInterval(_csisTimer));
+  wrap.addEventListener('mouseleave', startCsisAuto);
+  startCsisAuto();
+  csisGoTo(0);
 }
 
 function updateCsInfo() {
@@ -800,11 +872,30 @@ window.addEventListener('keydown', e => {
 });
 
 // Touch swipe on overlay to navigate projects
-let csTx = 0;
-csOverlay.addEventListener('touchstart', e => { csTx = e.changedTouches[0].clientX; }, { passive: true });
+// Uses direction detection so horizontal swipes aren't stolen by the vertical gallery scroll
+let csTx = 0, csTy = 0, csSwipeDir = null;
+
+csOverlay.addEventListener('touchstart', e => {
+  csTx = e.touches[0].clientX;
+  csTy = e.touches[0].clientY;
+  csSwipeDir = null;
+}, { passive: true });
+
+csOverlay.addEventListener('touchmove', e => {
+  if (!csSwipeDir) {
+    const dx = Math.abs(e.touches[0].clientX - csTx);
+    const dy = Math.abs(e.touches[0].clientY - csTy);
+    if (dx > 8 || dy > 8) csSwipeDir = dx > dy ? 'h' : 'v';
+  }
+  if (csSwipeDir === 'h') e.preventDefault();
+}, { passive: false });
+
 csOverlay.addEventListener('touchend', e => {
   const dx = e.changedTouches[0].clientX - csTx;
-  if (Math.abs(dx) > 55) dx < 0 ? navigateCaseStudy(csIndex + 1) : navigateCaseStudy(csIndex - 1);
+  if (csSwipeDir === 'h' && Math.abs(dx) > 45) {
+    dx < 0 ? navigateCaseStudy(csIndex + 1) : navigateCaseStudy(csIndex - 1);
+  }
+  csSwipeDir = null;
 }, { passive: true });
 
 // ── Scroll reveal ──────────────────────────────────────
@@ -1091,17 +1182,13 @@ const TRANSLATIONS = {
 
 // ── App image sliders ─────────────────────────────────────
 const APP_IMAGES = {
-  dei: [
-    'images/dreams/Screenshot (1098).png',
-    'images/dreams/Screenshot (1099).png',
-    'images/dreams/Screenshot (1100).png',
-    'images/dreams/Screenshot (1101).png',
-  ],
   nn: [
-    'images/dreams/Screenshot (1102).png',
-    'images/dreams/Screenshot (1103).png',
-    'images/dreams/Screenshot (1104).png',
-    'images/dreams/Screenshot (1105).png',
+    'images/app/1.jpeg',
+    'images/app/2.jpeg',
+    'images/app/3.jpeg',
+    'images/app/4.jpeg',
+    'images/app/5.jpeg',
+    'images/app/6.jpeg',
   ]
 };
 
@@ -1268,7 +1355,8 @@ document.addEventListener('DOMContentLoaded', () => {
   buildCards();
   buildSliderDots();
   buildCsThumbs();
-  goToSlide(0);
+  updateSliderUI();
+  startAutoSlide();
   document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
   initCounters();
 });
